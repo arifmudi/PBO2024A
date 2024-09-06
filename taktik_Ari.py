@@ -1,0 +1,18 @@
+print("### REQUEST TACTICAL DOLL ###")
+nama_doll = input ("Masukkan nama Tactical Doll: ")
+firepower = int(input("Masukkan Firepower: "))
+rate_of_fire = int(input("Masukkan Rate Of Fire: "))
+accuracy = int(input("Masukkan Accuracy: "))
+evasion = int(input("Masukkan Evasion: "))
+
+dps= round(firepower * rate_of_fire / 60, 2)
+combat_effectiveness = int(30 * firepower + 40 * rate_of_fire/120 + 15 * (accuracy+evasion))
+
+print("### SUCCESS ###")
+print(f"Nama Tactical Doll: {nama_doll}")
+print(f"Firepower: {firepower}")
+print(f"Rate of Fire: {rate_of_fire}")
+print(f"Accuracy: {accuracy}")
+print(f"Evasion: {evasion}")
+print(f"Damage per Second: {dps}")
+print(f"Combat Effectiveness: {combat_effectiveness}")
