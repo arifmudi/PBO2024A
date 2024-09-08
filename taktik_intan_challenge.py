@@ -9,7 +9,7 @@ rate_of_fire = input ("Jumlah Rate Of fire : ")
 accuracy = input ("Jumlah Accuracy : ")
 evasion = input ("Masukkan Evasion : ")
 damage_per_second = round (float(firepower) * float(rate_of_fire)/60,2)
-combat_effectiveness = int (30 * float(firepower) +(40 * (float(rate_of_fire) ** 2) / 120) +(15 * float(accuracy + evasion)))
+combat_effectiveness = int (30 * float(firepower) +(40 * (float(rate_of_fire) ** 2) / 120) +(15 * (float(accuracy) + float(evasion))))
 
 
 #TACTICAL DOLL MUSUH
@@ -20,7 +20,7 @@ rate_of_fire_musuh = input ("Jumlah Rate Of fire Musuh : ")
 accuracy_musuh = input ("Jumlah Accuracy Musuh : ")
 evasion_musuh = input ("Masukkan Evasion Musuh : ")
 damage_per_second_musuh = round (float(firepower_musuh) * float(rate_of_fire_musuh)/60,2)
-combat_effectiveness_musuh = int (30 * float(firepower_musuh) +(40 * (float(rate_of_fire_musuh) ** 2) / 120) +(15 * float(accuracy_musuh + evasion_musuh)))
+combat_effectiveness_musuh = int (30 * float(firepower_musuh) +(40 * (float(rate_of_fire_musuh) ** 2) / 120) +(15 * (float(accuracy_musuh) + float(evasion_musuh))))
 
 #KEPUTUSAN
 power_doll = damage_per_second + combat_effectiveness

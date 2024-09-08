@@ -1,0 +1,10 @@
+firepower = input ("Damage Firepower : ")
+rate_of_fire = input ("Jumlah Rate Of fire : ")
+accuracy = input ("Jumlah Accuracy : ")
+evasion = input ("Masukkan Evasion : ")
+cuva = int(accuracy) + int(evasion)
+damage_per_second = round (float(firepower) * float(rate_of_fire)/60,2)
+combat_effectiveness = int (30 * int(firepower) + (40 * (int(rate_of_fire) ** 2) / 120) + (15* (int(accuracy) + int(evasion))))
+
+print ("Damage Per Second : " + str(damage_per_second))
+print ("Combat Effectiveness : " + str(combat_effectiveness))
