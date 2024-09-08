@@ -20,11 +20,11 @@ evasion_musuh = int(input("Masukkan Evasion : "))
 
 # DPS dari kamu
 my_dps= round(firepower_kamu * rate_of_fire_kamu / 60, 2)
-my_combat_effectiveness = int(30 * firepower_kamu + 40 * rate_of_fire_kamu/120 + 15 * (accuracy_kamu+evasion_kamu))
+my_combat_effectiveness = int(30 * firepower_kamu + 40 * pow(rate_of_fire_kamu,2)/120 + 15 * (accuracy_kamu+evasion_kamu))
 
-# DPS dari kamu
+# DPS dari musuh
 enemy_dps= round(firepower_musuh * rate_of_fire_musuh / 60, 2)
-enemy_combat_effectiveness = int(30 * firepower_musuh + 40 * rate_of_fire_musuh/120 + 15 * (accuracy_musuh+evasion_musuh))
+enemy_combat_effectiveness = int(30 * firepower_musuh + 40 * pow(rate_of_fire_musuh,2)/120 + 15 * (accuracy_musuh+evasion_musuh))
 
 # menentukan keputusan
 if my_combat_effectiveness > enemy_combat_effectiveness:

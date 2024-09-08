@@ -6,7 +6,7 @@ accuracy = int(input("Masukkan Accuracy: "))
 evasion = int(input("Masukkan Evasion: "))
 
 dps= round(firepower * rate_of_fire / 60, 2)
-combat_effectiveness = int(30 * firepower + 40 * rate_of_fire/120 + 15 * (accuracy+evasion))
+combat_effectiveness = int(30 * firepower + 40 * pow(rate_of_fire,2)/120 + 15 * (accuracy+evasion))
 
 print("### SUCCESS ###")
 print(f"Nama Tactical Doll: {nama_doll}")
