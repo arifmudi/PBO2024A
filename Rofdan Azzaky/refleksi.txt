@@ -1,3 +1,0 @@
-Q1 = saya baru mengenal cara membuat lovemeter di python
-Q2 = Mungkin beberapa hal yang saya lupa, jadi bakal ingat lagi di semester ini
-Q3 = Mungkin sekitar 15-20 menit
