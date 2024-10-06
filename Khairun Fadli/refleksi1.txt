@@ -1,0 +1,3 @@
+Q1: Taks 2 Import random
+Q2: Memahami import random
+Q3: Membutuhkan waktu untuk memahami codingan
