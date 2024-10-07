@@ -1,0 +1,3 @@
+Q1: taks 2 import random
+Q2: memahami import random
+Q3: membutuhkan waktu untuk memahammi codingan 
