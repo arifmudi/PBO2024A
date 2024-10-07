@@ -1,9 +1,0 @@
-Question:
-Q1: Apa hal baru yang kamu pelajari melalui lab ini?
-Q2: Hal apa yang masih kamu sulit pahami?
-Q3: Berapa alokasi waktu kamu untuk mempelajari materi + lab minggu ini?
-
-Answer:
-Q1.Import modul random. Modul random digunakan untuk menghasilkan nilai acak. Fungsi random.random() mengembalikan sebuah nilai float antara 0 (inclusive) dan 1 (exclusive).
-Q2.Sejauh ini belum ada
-Q3.kurang lebih 1 jam
