@@ -1,0 +1,3 @@
+adalah tentang penggunaan variabel di pyhton
+adalah kelebihan dan kekurangan pada variabel di pyhton
+ yaitu 200 menit di lab 2f
