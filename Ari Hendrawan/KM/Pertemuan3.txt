@@ -21,7 +21,7 @@ Contoh :
 
     y="hello world" --> y pada kasus ini digambarkan memiliki nilai string hello world
 
--------------------------------------------------------- TIPE DATA ---------------------------------------------------------
+-------------------------------------------------------- TIPE DATA --------------------------------------------------------
 Tipe data adalah jenis nilai yang dapat disimpan dalam variabel. Diantaranya adalah :
     Integer: Angka bulat tanpa desimal, seperti int x = 5.
     Float: Angka dengan desimal, seperti float y = 3.14.
