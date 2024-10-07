@@ -1,0 +1,3 @@
+Q1 : Di task 2 import random . random()
+Q2 : Di task 2 memahami import random
+Q3 : butuh 20 menit atau beberapa menit untuk memahami nya
