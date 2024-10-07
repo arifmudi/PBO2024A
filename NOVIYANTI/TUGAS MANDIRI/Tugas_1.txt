@@ -1,0 +1,51 @@
+                                BASIC PYTHON
+
+A . PENDAHULUAN
+    Python adalah bahasa pemrograman yang populer dan mudah dipelajari. Bahasa ini 
+cocok untuk berbagai keperluan mulai dari pengembangan web, ilmu data,Matematika, 
+skrip sistem untuk mengotomatisasi tugas-tugas kecil. Python memiliki sintaksis
+Sederhana dan mirip dengan bahasa manusia, sehingga disukai banyak pemula.
+
+B . VARIABEL
+    Variabel adalah tempat penyimpanan data yang dapat digunakan kembali secara internal
+program. Di Python, tidak perlu mendeklarasikan tipe data variabel secara langsung
+jernih. Cukup berikan nama variabel dan berikan nilai.
+
+        contoh :
+    Nama = "Novi"
+    Umur = 20
+    tinggi = 1,57
+    
+    Dalam contoh di atas:
+    * Nama menyimpan nilai dalam bentuk teks ("Novi")
+    * Usia menyimpan nilai sebagai angka (20)
+    * tinggi menyimpan nilai sebagai angka desimal (1,57)
+
+
+C . TYPE DATA 
+    Python memiliki beberapa tipe data dasar, seperti:
+    * Integer (int): Bilangan bulat (contoh: 10, -5, 0)
+    * Float: Bilangan desimal (contoh: 3.14, 0.5)
+    * String (str): Teks (contoh: "Hello", "Python")
+    * Boolean (bool): True atau False
+
+        Contoh penggunaan tipe data :
+    * jumlah = 10           # Integer
+    * pi = 3.14             # Float
+    * pesan = "Halo Dunia"   # String
+    * aktif = True          # Boolean
+
+D . KOMENTAR
+    Komentar digunakan untuk menuliskan catatan di dalam kode yang tidak akan dieksekusi 
+oleh Python. Komentar sangat berguna untuk menjelaskan bagian-bagian kode agar lebih mudah 
+dipahami oleh orang lain atau diri sendiri di masa mendatang. Di Python, kamu bisa membuat 
+komentar dengan menambahkan tanda pagar # di awal kalimat.
+
+        Contoh :
+    # Ini adalah komentar, Python tidak akan mengeksekusi baris ini
+    nama = "Novi"  # Ini juga komentar
+Komentar bisa membantumu memberi penjelasan singkat tentang fungsi atau logika yang kamu 
+tulis dalam kode.
+
+
+    
