@@ -1,0 +1,44 @@
+Pendahuluan python:
+Python adalah salah satu bahasa pemrograman yang dapat melakukan eksekusi sejumlah instruksi multi guna secara langsung (interpretatif) 
+dengan metode orientasi objek.Python adalah bahasa pemrograman yang paling mudah dipahami.Python dapat digunakan untuk berbagai keperluan, seperti:
+Pengembangan web, Analisis data, Kecerdasan buatan, Pengembangan permainan, Pengembangan aplikasi desktop, Pemrograman jaringan, Tes software.
+
+variabel:
+Variabel adalah tempat untuk menyimpan data atau nilai yang dapat digunakan dan dimanipulasi dalam program. 
+Variabel memiliki nama yang unik untuk mengidentifikasinya dan dapat berisi berbagai tipe data.
+
+Contoh dalam Python:
+
+    nama = "Amita"  
+    umur = 25     
+
+Setiap bahasa pemrograman memiliki aturan atau konvensi tertentu dalam penamaan variabel, seperti:
+Harus dimulai dengan huruf atau underscore (_). Tidak boleh mengandung spasi.
+Tidak boleh menggunakan kata kunci yang ada dalam bahasa tersebut (misalnya if, for, while).
+
+Type Data:
+Tipe data merupakan salah satu konsep dasar yang penting dalam pemrograman. 
+Dengan memahami tipe data, programmer dapat menyimpan dan memanipulasi berbagai
+jenis nilai, seperti angka, teks, dan karakter khusus.
+
+    integer (int): Bilangan bulat, misalnya 10, -5, 0.
+
+    Float: Bilangan desimal, misalnya 3.14, 0.99.
+
+    String (str): Teks, misalnya "Hello", "123".
+
+    Boolean (bool): Nilai logika True atau False.
+
+    List/Array: Sekumpulan elemen, misalnya [1, 2, 3] atau ["a", "b", "c"].
+
+ 
+Komentar:
+Komentar adalah teks dalam kode yang tidak dieksekusi oleh program. Komentar digunakan untuk memberi penjelasan tentang
+fungsi atau logika tertentu dalam kode, sehingga lebih mudah dipahami oleh
+programmer lain (atau diri sendiri di kemudian hari). Komentar dapat berupa satu baris atau banyak baris.
+
+contoh:
+    # Menginisialisasi variabel dengan nama "Amita"
+    nama = "Amita" # ini juga komentar
+
+Komentar tidak dieksekusi oleh program dan hanya untuk membantu pengembang memahami kode lebih baik.
