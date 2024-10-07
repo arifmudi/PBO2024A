@@ -1,0 +1,88 @@
+Q1 = Menjelaskan kembali apa itu class dan membuat contohnya
+N = 
+class adalah blue print dari suatu objek, yang mana terdiri dari stribut dan method
+contohnya : 
+class orang : 
+    def__init__(self,nama,umur):
+    self.nama = nama
+    self.umur = umur 
+
+    def perkenalan (self):
+        print(F"Hallo, nama saya {self.nama} dan saya berumur {self.umur} tahun.')
+
+Q2 = perbedaan fungsi construction (konstruktor) dan function (method)
+N = konstruktor adalah pondasi dari class, dan method adalah fungsi yang dipakai dalam class
+class orang : 
+    def__init__(self,nama,umur): (KONSTRUKTOR)
+    self.nama = nama
+    self.umur = umur 
+
+    def perkenalan (self): (METHOD)
+        print(F"Hallo, nama saya {self.nama} dan saya berumur {self.umur} tahun.')
+
+Q3 = Default value pada konstruktor itu terdapaat pada (self)
+contoh : 
+     def __init__(self, nama, umur=21(Default value)):
+
+________________________________________TUGAS MK3___________________________________________
+
+___Pendahuluan___
+Nama : Intan Nurzari
+NIM : 2355201035
+kelas : A 
+
+Python adalah bahasa pemrograman tingkat tinggi, interaktif, berorientasi objek, dan serbaguna yang sangat populer. 
+Python adalah bahasa pemrograman yang diketik secara dinamis dan menggunakan metode garbage-collecting. 
+Bahasa ini diciptakan oleh Guido van Rossum selama tahun 1985-1990. 
+Seperti Perl, kode sumber Python juga tersedia di bawah Lisensi Publik Umum GNU (GPL).
+Dalam python terdapat beberapa dasar yang harus diketahui, diantaranya Variabel, type data dan komentar
+
+___Variabel___
+
+Variabel dalam Python adalah tempat untuk menyimpan data. variabel dapat diberikan sebuah nama dan memiliki isi sebuah value (nilai)
+nilai dalam sebuah variabel dapat diisi dengan string (huruf), integer (angka), float (angka brkoma), boolean (true,false)
+list, tuple, 
+contoh sebuah variabel bernama "buah" dan memiliki value string "apple"
+            buah = "apple"
+Case Sensitif pada penamaan python 
+> Camel Case 
+    setiap huruf depan kata pada nama variabel harus menggunakan huruf kapital 
+    kecuali di kata pertama , 
+        cont: uchihaItachi = 31
+> Pascal Case
+    setiap huruf depan kata pada nama variabel harus menggunakan huruf kapital 
+        cont: UchihaItachi = 31
+> Snake Case 
+    setiap kata dalam nama variabel dipisahkan dengan andeskor dan semuanya huruf kecil(_)
+    cont: uchiha_itachi = 31
+
+
+___Type Data___
+
+Tipe data merupakan jenis jenis data yang terdapat didalam sebuah variabel, diantaranya yaitu:
+> String (str) -> Value berupa huruf
+    x = "Intan"
+> Integer (int) -> Value berupa angka bilangan bulat
+    x = 27
+> Float (float) -> value berupa angka bilangan berkoma
+    x = 27.5
+> boolean (bool) -> Value berupa True or False 
+    x = true
+> List (list) -> Value variabel brupa list
+    x = ["mangga","jambu"]
+> tuple (tuple) -> value variabel berupa tuple
+    x = (("nanas","mengkudu"))
+
+
+___Komentar___
+
+komentar pada python menggunakan tanda #
+Komentar pada python digunakan untuk menjelaskan beberapa hal yang terdapat didalam codingan kita misal
+
+#jenis value pada variabel ini adalah integer (int)
+ini_variabel = 23
+
+
+
+
+
