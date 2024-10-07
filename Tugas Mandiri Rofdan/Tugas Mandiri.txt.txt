@@ -1,0 +1,25 @@
+Pendahuluan
+
+Nama  : Rofdan Azzaky Fauzi
+Nim   :	2355201015
+prodi : S1 Teknik Informatika
+
+	Python merupakan bahasa pemrograman komputer yang biasa dipakai untuk membangun situs, software/aplikasi, mengotomatiskan tugas dan melakukan analisis data. Bahasa pemrograman ini termasuk bahasa tujuan umum. Artinya, ia bisa digunakan untuk membuat berbagai program berbeda, bukan khusus untuk masalah tertentu saja Karena sifatnya yang serba guna dan mudah digunakan, ia menjadi bahasa pemrograman yang paling banyak digunakan. Terutama untuk mereka yang masih pemula.
+	Berdasarkan survei pengembang Stack Overflow tahun 2022, Python menjadi bahasa pemrograman terpopuler keempat. Sebanyak hampir 50% dari responden mengatakan bahwa mereka menggunakan hampir setengah dari waktu kerja mereka dengan menggunakan bahasa pemrograman ini. Nama Python sendiri berasal dari Monty Python. Ketika Guido van Rossum membuatnya, dia juga sedang membaca skrip Sirkus Terbang Monty Python BBC. Menurutnya nama itu singkat dan sedikit misterius. Karena itulah, sang kreator memilih menggunakan nama tersebut untuk bahasa pemrograman yang dibuatnya itu.
+
+	----------------------------------------------------------------------------------------------------------------------------------
+	Variabel dalam Python adalah tempat untuk menyimpan nilai atau data. Kamu bisa menganggap variabel sebagai wadah yang memiliki nama dan bisa diisi dengan berbagai tipe data, seperti angka, teks, daftar, dan banyak lagi. 
+	
+	# Mendeklarasikan variabel
+nama = "Arthur"
+umur = 19
+nilai = 90.5
+daftar_hobi = ["membaca", "berlari", "berkebun"]
+
+# Mengakses nilai variabel
+print(nama)  # Output: Arthur
+print(umur)  # Output: 19
+print(nilai) # Output: 90.5
+print(daftar_hobi) # Output: ['membaca', 'berlari', 'berkebun']
+---------------------------------------------------------------------------------------------------------------------------------------
+Tipe data dalam Python adalah kategori yang digunakan untuk menentukan jenis nilai yang dapat disimpan dalam variabel
