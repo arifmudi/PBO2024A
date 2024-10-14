@@ -1,43 +1,54 @@
-class EligmaDecryptor:
-    def __init__(self, message):
-        self.message = message
-        self.shift_value = 0  # Inisialisasi nilai pergeseran
+class EnigmaDecoder:
+    def __init__(self, text):
+        """
+        Inisialisasi kelas dengan teks yang akan didekripsi.
+        Args:
+            text: Teks yang akan didekripsikan.
+        """
+        self.text = text
 
-    def calculate_shift(self):
-        # Menghitung total dari angka dalam string
-        total = sum(int(char) for char in self.message if char.isdigit())
-        self.shift_value = total  # Mengatur nilai pergeseran berdasarkan total
+    def enigma_decode(self):
+        """
+        Fungsi untuk mendekripsikan kode enigma,
+        Returns:
+            Teks yang sudah didekripsikan,atau pesan error jika tidak ada angka dalam teks.
+        """
+         # Cek apakah teks mengandung setidaknya 1 angka
+        if not any(char.isdigit() for char in self.text):
+            return "Error: Pesan harus mengandung setidaknya 1 angka."
 
-    def decrypt(self):
-        # Menggeser huruf berdasarkan total yang dihitung
-        decrypted_message = ""
-        for char in self.message:
-            if char.isalpha():  # Memeriksa apakah karakter adalah huruf
-                # Menggeser karakter
-                if char.islower():
-                    new_char = chr((ord(char) - ord('a') + self.shift_value) % 26 + ord('a'))
-                else:
-                    new_char = chr((ord(char) - ord('A') + self.shift_value) % 26 + ord('A'))
-                decrypted_message += new_char  # Menambahkan karakter yang telah digeser
-        return decrypted_message
+        numbers =[]
+        letters = []
+        for char in self.text:
+            if char.isdigit():
+                numbers.append(int(char))
+            elif char.isalpha():
+                letters.append(char)
 
-# Input dari pengguna
-input_message = input("Masukkan pesan  (minimal 1 angka): ")
+        # Hitung total angka
+        total_numbers = sum(numbers)
 
-# Validasi input
-if not any(char.isdigit() for char in input_message):
-    print("Pesan harus mengandung minimal satu angka.")
-else:
-    # Membuat instance dari kelas EligmaDecryptor
-    decryptor = EligmaDecryptor(input_message)
+        # Dekripsikan alfabet
+        decoded_letters = []
+        for letter in letters:
+            # Konversi huruf menjadi kode ASCII
+            ascii_code = ord(letter)
+            # Geser huruf ke kanan sesuai total angka
+            shifted_code = ascii_code + total_numbers
+            # Jika huruf melewati 'z', reset ke 'a'
+            if shifted_code > ord('z'):
+                shifted_code -= 26
+            # Konversi kode ASCII kembali menjadi huruf
+            decoded_letter = chr(shifted_code)
+            decoded_letters.append(decoded_letter)
 
-    # Menghitung nilai pergeseran berdasarkan angka dalam pesan
-    decryptor.calculate_shift()
+        # Gabungkan huruf yang sudah didekripsikan
+        decoded_text = "".join(decoded_letters)
 
-    # Mendapatkan hasil dekripsi
-    result = decryptor.decrypt()
+        return decoded_text
 
-    # Menampilkan hasil dekripsi
-    print("Isi pesannya:", result)
-
-#--------------------------------------------------------------------------------------
+# Contoh penggunaan
+input_text = input("Masukkan teks: ")
+decoder = EnigmaDecoder(input_text)  # Membuat instance kelas EnigmaDecoder dengan input teks
+decoded_text = decoder.enigma_decode()  # Memanggil metode enigma_decode
+print(f"Input: {input_text}, Output: {decoded_text}")
