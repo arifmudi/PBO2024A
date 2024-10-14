@@ -10,6 +10,8 @@ class EnigmaDecoder:
                 numbers.append(int(char))
             elif char.isalpha():
                 letters.append(char)
+        if not numbers:
+            return "minimal masukkan 1 angka"
 
         # Hitung total angka
         total_numbers = sum(numbers)
