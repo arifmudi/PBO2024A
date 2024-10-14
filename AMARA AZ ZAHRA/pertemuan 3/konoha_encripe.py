@@ -10,6 +10,7 @@ class EnigmaDecoder:
                 numbers.append(int(char))
             elif char.isalpha():
                 letters.append(char)
+        # Jika tidak ada angka, kembalikan string kosong
         if not numbers:
             return "minimal masukkan 1 angka"
 
