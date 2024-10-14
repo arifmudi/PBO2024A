@@ -2,6 +2,11 @@ class Konoha:
     # Fungsi yang dijalankan saat objek dibuat
     def __init__(self, input_string):
         self.input_string = input_string  # Simpan input string
+    # Periksa apakah input hanya berisi huruf
+        if
+        self.input_string.isalpha():
+            raise
+        ValueError("Input Tidak Memiliki Angka.") #Jika hanya huruf 
         self.shift_value = self.calculate_shift()  # Hitung jumlah angka dalam string
 
     # Fungsi untuk menghitung total dari semua angka dalam string
