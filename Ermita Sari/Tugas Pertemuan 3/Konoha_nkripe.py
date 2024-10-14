@@ -1,46 +1,43 @@
-def enigma_decode(text):
-  """
-  Fungsi untuk mendekripsikan kode enigma.
+class EligmaDecryptor:
+    def __init__(self, message):
+        self.message = message
+        self.shift_value = 0  # Inisialisasi nilai pergeseran
 
-  Args:
-    text: Teks yang akan didekripsikan.
+    def calculate_shift(self):
+        # Menghitung total dari angka dalam string
+        total = sum(int(char) for char in self.message if char.isdigit())
+        self.shift_value = total  # Mengatur nilai pergeseran berdasarkan total
 
-  Returns:
-    Teks yang sudah didekripsikan.
-  """
+    def decrypt(self):
+        # Menggeser huruf berdasarkan total yang dihitung
+        decrypted_message = ""
+        for char in self.message:
+            if char.isalpha():  # Memeriksa apakah karakter adalah huruf
+                # Menggeser karakter
+                if char.islower():
+                    new_char = chr((ord(char) - ord('a') + self.shift_value) % 26 + ord('a'))
+                else:
+                    new_char = chr((ord(char) - ord('A') + self.shift_value) % 26 + ord('A'))
+                decrypted_message += new_char  # Menambahkan karakter yang telah digeser
+        return decrypted_message
 
-  numbers = []
-  letters = []
-  for char in text:
-    if char.isdigit():
-      numbers.append(int(char))
-    elif char.isalpha():
-      letters.append(char)
+# Input dari pengguna
+input_message = input("Masukkan pesan  (minimal 1 angka): ")
 
-  # Hitung total angka
-  total_numbers = sum(numbers)
+# Validasi input
+if not any(char.isdigit() for char in input_message):
+    print("Pesan harus mengandung minimal satu angka.")
+else:
+    # Membuat instance dari kelas EligmaDecryptor
+    decryptor = EligmaDecryptor(input_message)
 
-  # Dekripsikan alfabet
-  decoded_letters = []
-  for letter in letters:
-    # Konversi huruf menjadi kode ASCII
-    ascii_code = ord(letter)
-    # Geser huruf ke kanan sesuai total angka
-    shifted_code = ascii_code + total_numbers
-    # Jika huruf melewati 'z', reset ke 'a'
-    if shifted_code > ord('z'):
-      shifted_code -= 26
-    # Konversi kode ASCII kembali menjadi huruf
-    decoded_letter = chr(shifted_code)
-    decoded_letters.append(decoded_letter)
+    # Menghitung nilai pergeseran berdasarkan angka dalam pesan
+    decryptor.calculate_shift()
 
-  # Gabungkan huruf yang sudah didekripsikan
-  decoded_text = "".join(decoded_letters)
+    # Mendapatkan hasil dekripsi
+    result = decryptor.decrypt()
 
-  return decoded_text
+    # Menampilkan hasil dekripsi
+    print("Isi pesannya:", result)
 
-# Contoh penggunaan
-input_text = "M13b3yni"
-decoded_text = enigma_decode(input_text)
-print(f"Input: {input_text}")
-print(f"Output: {decoded_text}")
+#--------------------------------------------------------------------------------------
