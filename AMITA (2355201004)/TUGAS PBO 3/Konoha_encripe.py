@@ -30,17 +30,17 @@ class Konoha:
 
         for letter in self.letters:
             if letter.islower():
-                # Geser huruf kecil
-                new_char = chr((ord(letter) - ord('a') - shift) % 26 + ord('a'))
+                # Geser huruf kecil ke kanan
+                new_char = chr((ord(letter) - ord('a') + shift) % 26 + ord('a'))
             else:
-                # Geser huruf besar
-                new_char = chr((ord(letter) - ord('A') - shift) % 26 + ord('A'))
+                # Geser huruf besar ke kanan
+                new_char = chr((ord(letter) - ord('A') + shift) % 26 + ord('A'))
             decrypted_letters.append(new_char)
 
         return ''.join(decrypted_letters)
 
 # Contoh penggunaan
-input_str = "A2bc3"
+input_str = "aaaaa1"
 decoder = Konoha(input_str)
 output = decoder.decrypt()
 print(output)
