@@ -40,7 +40,7 @@ def enigma_decode(text):
   return decoded_text
 
 # Contoh penggunaan
-input_text = "M13b3yni"
+input_text = input("masukkan nama:")
 decoded_text = enigma_decode(input_text)
 print(f"Input: {input_text}")
 print(f"Output: {decoded_text}")
