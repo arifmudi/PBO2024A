@@ -1,0 +1,65 @@
+ PENDAHULUAN
+    1. Python adalah salah satu bahasa pemrograman paling populer. 
+ Meskipun merupakan bahasa tujuan umum, bahasa ini digunakan di berbagai 
+ bidang aplikasi seperti Pembelajaran Mesin, Kecerdasan Buatan, pengembangan 
+ web, IoT, dan banyak lagi.
+ Python adalah bahasa pemrograman yang ditafsirkan, interaktif, berorientasi 
+ objek, dan tingkat tinggi tujuan umum yang sangat populer. Python adalah bahasa 
+ pemrograman yang diketik secara dinamis dan dikumpulkan sampah. Itu dibuat oleh
+  Guido van Rossum selama tahun 1985-1990. Seperti Perl, kode sumber Python juga 
+  tersedia di bawah Lisensi Publik Umum GNU (GPL).
+
+  contoh:
+  print("Hello, World!")
+
+  2.Variabel
+  Variabel Python adalah lokasi memori cadangan yang digunakan untuk menyimpan nilai 
+  dalam Program Python. Ini berarti bahwa ketika Anda membuat variabel, Anda mencadangkan 
+  beberapa ruang di memori.
+  Berdasarkan tipe data variabel, penerjemah Python mengalokasikan memori dan memutuskan 
+  apa yang dapat disimpan dalam memori yang dicadangkan. Oleh karena itu, dengan menetapkan 
+  tipe data yang berbeda ke variabel Python, Anda dapat menyimpan bilangan bulat, desimal,
+  atau karakter dalam variabel ini.
+  contoh:
+    x = 5
+    y = "John"
+    print(x)
+    print(y)    
+
+   3.Type data
+   Tipe data Python sebenarnya adalah kelas, dan variabel yang ditentukan adalah instance 
+   atau objeknya. Karena Python diketik secara dinamis, tipe data variabel ditentukan pada 
+   runtime berdasarkan nilai yang ditetapkan.
+   Secara umum, tipe data digunakan untuk menentukan jenis variabel. Ini mewakili jenis data yang 
+   akan kita simpan dalam variabel dan menentukan operasi apa yang dapat dilakukan di atasnya.
+   Setiap bahasa pemrograman memiliki klasifikasi item datanya sendiri. Dengan tipe data ini, kita 
+   dapat menyimpan berbagai jenis nilai data.
+   Python memiliki tipe data bawaan berikut secara default, dalam kategori ini:
+
+    Jenis Teks:	str
+    Jenis Numerik:	int, , floatcomplex
+    Jenis urutan:	list, , tuplerange
+    Jenis Pemetaan:	dict
+    Jenis Set:	set, frozenset
+    Tipe Boolean:	bool
+    Jenis Biner:	bytes, , bytearraymemoryview
+    Tidak ada jenis:	NoneType
+
+   contoh:
+   Cetak tipe data variabel x:
+    x = 5
+    print(type(x))
+
+
+   4.Komentar
+   Komentar Python adalah penjelasan atau anotasi yang dapat dibaca oleh programmer dalam kode sumber 
+   Python. Mereka ditambahkan dengan tujuan membuat kode sumber lebih mudah dipahami manusia, dan 
+   diabaikan oleh interpreter Python. Komentar meningkatkan keterbacaan kode dan membantu pemrogram 
+   untuk memahami kode dengan sangat hati-hati.
+
+   contoh:
+    #This is a comment
+    print("Hello, World!")
+
+    #print("Hello, World!")
+    print("Cheers, Mate!")
