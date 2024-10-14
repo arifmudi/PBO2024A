@@ -1,25 +1,32 @@
-def decrypt_eligma_code(input_str):
-    # Inisialisasi variabel
-    jumlah_angka = 0
-    hasil_dekripsi = ""
+class EligmaDecryptor:
+    def __init__(self, input_str):
+        self.input_str = input_str
+        self.jumlah_angka = 0
+        self.hasil_dekripsi = ""
 
-    # Iterasi melalui setiap karakter dalam input
-    for char in input_str:
-        if char.isdigit():  # Jika karakter adalah angka
-            jumlah_angka += int(char)
-        elif char.isalpha():  # Jika karakter adalah alfabet
-            hasil_dekripsi += char
+    def _hitung_angka_dan_dekripsi(self):
+        for char in self.input_str:
+            if char.isdigit():
+                self.jumlah_angka += int(char)
+            elif char.isalpha():
+                self.hasil_dekripsi += char
 
-    # Geser setiap alfabet sebanyak jumlah_angka
-    output = ""
-    for char in hasil_dekripsi:
-        # Geser ke kanan dengan memperhatikan siklus alfabet
-        geser = (ord(char.lower()) - ord('a') + jumlah_angka) % 26
-        karakter_baru = chr(ord('a') + geser)
-        output += karakter_baru
+    def decrypt(self):
+        self._hitung_angka_dan_dekripsi()
 
-    return output
+        output = ""
+        for char in self.hasil_dekripsi:
+            if char.islower():
+                geser = (ord(char) - ord('a') + self.jumlah_angka) % 26
+                karakter_baru = chr(ord('a') + geser)
+            elif char.isupper():
+                geser = (ord(char) - ord('A') + self.jumlah_angka) % 26
+                karakter_baru = chr(ord('A') + geser)
+            
+            output += karakter_baru
 
-# Contoh penggunaan
+        return output
+
 input_str = "M13b3yni"
-print(decrypt_eligma_code(input_str)) # Output: tifup
+decryptor = EligmaDecryptor(input_str)
+print(decryptor.decrypt())
