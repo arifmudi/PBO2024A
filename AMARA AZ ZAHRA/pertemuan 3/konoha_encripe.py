@@ -1,36 +1,41 @@
-def enigma_decode(text):
-  numbers = []
-  letters = []
-  for char in text:
-    if char.isdigit():
-      numbers.append(int(char))
-    elif char.isalpha():
-      letters.append(char)
+class EnigmaDecoder:
+    def __init__(self, text):
+        self.text = text
 
-  # Hitung total angka
-  total_numbers = sum(numbers)
+    def decode(self):
+        numbers = []
+        letters = []
+        for char in self.text:
+            if char.isdigit():
+                numbers.append(int(char))
+            elif char.isalpha():
+                letters.append(char)
 
-  # Dekripsikan alfabet
-  decoded_letters = []
-  for letter in letters:
-    # Konversi huruf menjadi kode ASCII
-    ascii_code = ord(letter)
-    # Geser huruf ke kanan sesuai total angka
-    shifted_code = ascii_code + total_numbers
-    # Jika huruf melewati 'z', reset ke 'a'
-    if shifted_code > ord('z'):
-      shifted_code -= 26
-    # Konversi kode ASCII kembali menjadi huruf
-    decoded_letter = chr(shifted_code)
-    decoded_letters.append(decoded_letter)
+        # Hitung total angka
+        total_numbers = sum(numbers)
 
-  # Gabungkan huruf yang sudah didekripsikan
-  decoded_text = "".join(decoded_letters)
+        # Dekripsikan alfabet
+        decoded_letters = []
+        for letter in letters:
+            # Konversi huruf menjadi kode ASCII
+            ascii_code = ord(letter)
+            # Geser huruf ke kanan sesuai total angka
+            shifted_code = ascii_code + total_numbers
+            # Jika huruf melewati 'z', reset ke 'a'
+            if shifted_code > ord('z'):
+                shifted_code -= 26
+            # Konversi kode ASCII kembali menjadi huruf
+            decoded_letter = chr(shifted_code)
+            decoded_letters.append(decoded_letter)
 
-  return decoded_text
+        # Gabungkan huruf yang sudah didekripsikan
+        decoded_text = "".join(decoded_letters)
+        return decoded_text
+
 
 # Contoh penggunaan
-input_text = input ("masukkan text:")
-decoded_text = enigma_decode(input_text)
+input_text = input("Masukkan nama: ")
+decoder = EnigmaDecoder(input_text)
+decoded_text = decoder.decode()
 print(f"Input: {input_text}")
 print(f"Output: {decoded_text}")
