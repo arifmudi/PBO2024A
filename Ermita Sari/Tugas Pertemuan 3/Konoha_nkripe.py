@@ -1,5 +1,5 @@
 class EnigmaDecoder:
-    def init(self, text):
+    def __init__(self, text):
         """
         Inisialisasi kelas dengan teks yang akan didekripsi.
         Args:
