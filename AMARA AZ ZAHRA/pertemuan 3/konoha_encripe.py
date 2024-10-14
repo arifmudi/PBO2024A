@@ -1,14 +1,4 @@
 def enigma_decode(text):
-  """
-  Fungsi untuk mendekripsikan kode enigma.
-
-  Args:
-    text: Teks yang akan didekripsikan.
-
-  Returns:
-    Teks yang sudah didekripsikan.
-  """
-
   numbers = []
   letters = []
   for char in text:
@@ -40,7 +30,7 @@ def enigma_decode(text):
   return decoded_text
 
 # Contoh penggunaan
-input_text = "M13b3yni"
+input_text = input ("masukkan text:")
 decoded_text = enigma_decode(input_text)
 print(f"Input: {input_text}")
 print(f"Output: {decoded_text}")
