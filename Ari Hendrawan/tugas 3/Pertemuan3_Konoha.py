@@ -24,8 +24,15 @@ class EligmaEncryptor:
         )
         return hasil_geser
 
+def get_valid_input():
+    while True:
+        masuk_string = input("Masukkan pesan Rahasia: ")
+        if any(char.isdigit() for char in masuk_string):
+            return masuk_string
+        else:
+            print("Bikin apa sih lu? kasih angka kek.")
 
-masuk_string = input("Masukkan pesan Rahasia: ")
+masuk_string = get_valid_input()
 pengode = EligmaEncryptor(masuk_string)
 kode_string = pengode.encrypt()
 print("Kode Rahasia:", kode_string)
