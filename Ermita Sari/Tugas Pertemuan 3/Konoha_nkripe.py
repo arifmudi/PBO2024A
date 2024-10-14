@@ -1,5 +1,5 @@
 class EnigmaDecoder:
-    def __init__(self, text):
+    def init(self, text):
         """
         Inisialisasi kelas dengan teks yang akan didekripsi.
         Args:
@@ -9,43 +9,26 @@ class EnigmaDecoder:
 
     def enigma_decode(self):
         """
-        Fungsi untuk mendekripsikan kode enigma,
+        Fungsi untuk mendekripsikan teks dengan menggeser huruf
+        berdasarkan total nilai angka dalam teks.
         Returns:
-            Teks yang sudah didekripsikan,atau pesan error jika tidak ada angka dalam teks.
+            Teks yang sudah didekripsikan, atau pesan error jika tidak ada angka dalam teks.
         """
-         # Cek apakah teks mengandung setidaknya 1 angka
+        # Cek apakah teks mengandung setidaknya 1 angka
         if not any(char.isdigit() for char in self.text):
             return "Error: Pesan harus mengandung setidaknya 1 angka."
 
-        numbers =[]
-        letters = []
+        total_shift = sum(int(char) for char in self.text if char.isdigit())
+        decoded_text = []
+
         for char in self.text:
-            if char.isdigit():
-                numbers.append(int(char))
-            elif char.isalpha():
-                letters.append(char)
+            if char.isalpha():
+                # Geser huruf dengan mempertimbangkan jenis huruf
+                base = ord('a') if char.islower() else ord('A')
+                shifted_code = (ord(char) - base + total_shift) % 26 + base
+                decoded_text.append(chr(shifted_code))
 
-        # Hitung total angka
-        total_numbers = sum(numbers)
-
-        # Dekripsikan alfabet
-        decoded_letters = []
-        for letter in letters:
-            # Konversi huruf menjadi kode ASCII
-            ascii_code = ord(letter)
-            # Geser huruf ke kanan sesuai total angka
-            shifted_code = ascii_code + total_numbers
-            # Jika huruf melewati 'z', reset ke 'a'
-            if shifted_code > ord('z'):
-                shifted_code -= 26
-            # Konversi kode ASCII kembali menjadi huruf
-            decoded_letter = chr(shifted_code)
-            decoded_letters.append(decoded_letter)
-
-        # Gabungkan huruf yang sudah didekripsikan
-        decoded_text = "".join(decoded_letters)
-
-        return decoded_text
+        return ''.join(decoded_text)
 
 # Contoh penggunaan
 input_text = input("Masukkan teks: ")
