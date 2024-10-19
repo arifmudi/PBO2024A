@@ -34,19 +34,19 @@
 
     *EXAMPLE:*
    
-    #defining class
-    class Smartphone:
-        #constructor    
-        def __init__(self, device, brand):
-            self.device = device
-            self.brand = brand
-        #method of the class
-        def description(self):
-            return f"{self.device} of {self.brand} supports Android 14"
-        #creating object of the class
-        phoneObj = Smartphone("Smartphone", "Samsung")
-        print(phoneObj.description())
-        OUTPUT: "Smartphone of Samsung supports Android 14"
+        #defining class
+        class Smartphone:
+            #constructor    
+            def __init__(self, device, brand):
+                self.device = device
+                self.brand = brand
+            #method of the class
+            def description(self):
+                return f"{self.device} of {self.brand} supports Android 14"
+            #creating object of the class
+            phoneObj = Smartphone("Smartphone", "Samsung")
+            print(phoneObj.description())
+            OUTPUT: "Smartphone of Samsung supports Android 14"
 
     # The __init__() Function
     Untuk memahami arti kelas kita harus memahami __init__() bawaan fungsi.
@@ -55,15 +55,15 @@
     *Contoh*
     Buat kelas bernama Person, gunakan fungsi __init__() untuk menetapkan nilai Untuk nama dan usia:
    
-    class Person:
-        def __init__(self, name, age):
-            self.name = name
-            self.age = age
-        p1 = Person("Rara", 19)
-        print(p1.name)
-        print(p1.age)
-        Output: "Rara"
-                19
+        class Person:
+            def __init__(self, name, age):
+                self.name = name
+                self.age = age
+            p1 = Person("Rara", 19)
+            print(p1.name)
+            print(p1.age)
+            Output: "Rara"
+                    19
     *Note: Fungsi ini dipanggil secara otomatis setiap kali kelas digunakan untuk membuat objek baru.__init__()*
 
     # The __str__() Function
@@ -72,15 +72,15 @@
     Contoh
     Representasi string dari objek DENGAN fungsi __str__():
    
-    class Person:
-        def __init__(self, name, age):
-            self.name = name
-            self.age = age
-        def __str__(self):
-        return f"{self.name}({self.age})"
-    p1 = Person("Rara", 19)
-    print(p1)
-    Output: "Rara(19)"
+        class Person:
+            def __init__(self, name, age):
+                self.name = name
+                self.age = age
+            def __str__(self):
+            return f"{self.name}({self.age})"
+        p1 = Person("Rara", 19)
+        print(p1)
+        Output: "Rara(19)"
 
 4. **Python-Attributes**
     Atribut adalah variabel yang terkait dengan objek dan digunakan untuk menyimpan data tentang objek tersebut. Atribut didefinisikan di dalam kelas.
@@ -100,17 +100,17 @@
     *Contoh*
     Contoh di bawah ini menunjukkan cara mengakses atribut kelas Python.
    
-    class Employee:
-        name = "Amara Az Zahra"
-        age = "19"
-    #instance of the class
-    emp = Employee()
-    #accessing class attributes
-    print("Name of the Employee:", emp.name)
-    print("Age of the Employee:", emp.age)
-    *Hasil*
-    Name of the Employee: Amara Az Zahra
-    Age of the Employee: 19
+        class Employee:
+            name = "Amara Az Zahra"
+            age = "19"
+        #instance of the class
+        emp = Employee()
+        #accessing class attributes
+        print("Name of the Employee:", emp.name)
+        print("Age of the Employee:", emp.age)
+        *Hasil*
+        Name of the Employee: Amara Az Zahra
+        Age of the Employee: 19
 
     # Atribut kelas penting karena alasan berikut:
     * Mereka digunakan untuk mendefinisikan properti kelas yang harus memiliki nilai yang sama untuk setiap objek kelas tersebut.
@@ -123,15 +123,15 @@
     Contoh
     Masukkan fungsi yang mencetak salam, dan jalankan pada objek p1:
    
-    class Person:
-        def __init__(self, name, age):
-            self.name = name
-            self.age = age
-        def myfunc(self):
-            print("Hello my name is " + self.name)
-    p1 = Person("Rara", 19)
-    p1.myfunc()
-    Output: "Hello my name is Rara"
+        class Person:
+            def __init__(self, name, age):
+                self.name = name
+                self.age = age
+            def myfunc(self):
+                print("Hello my name is " + self.name)
+        p1 = Person("Rara", 19)
+        p1.myfunc()
+        Output: "Hello my name is Rara"
     *Nota: Parameter adalah referensi ke instance kelas saat ini, dan digunakan untuk mengakses variabel yang termasuk dalam kelas.* **self**
 
 8. **Python-Constructors**
@@ -142,8 +142,8 @@
     # Membuat konstruktor di Python
     Metode __init__() bertindak sebagai konstruktor. Dibutuhkan argumen wajib bernama self, yang merupakan referensi ke objek.
 
-    def __init__(self, parameters):
-    #initialize instance variables
+        def __init__(self, parameters):
+        #initialize instance variables
 
     Metode __init__() serta metode instance apa pun dalam kelas memiliki parameter wajib, self. Namun, Anda dapat memberikan nama apa pun untuk parameter pertama, tidak harus sendiri.
 
@@ -157,18 +157,18 @@
     *Contoh*
     Definisikan konstruktor di kelas Employee untuk menginisialisasi nama dan usia sebagai variabel instance. Kemudian dapat mengakses atribut ini melalui objeknya.
 
-    class Employee:
-        'Common base class for all employees'
-        def __init__(self):
-            self.name = "Bhavana"
-            self.age = 24
-
-    e1 = Employee()
-    print ("Name: {}".format(e1.name))
-    print ("age: {}".format(e1.age))
-    *Output*
-    Name: Bhavana
-    age: 24
+        class Employee:
+            'Common base class for all employees'
+            def __init__(self):
+                self.name = "Bhavana"
+                self.age = 24
+    
+        e1 = Employee()
+        print ("Name: {}".format(e1.name))
+        print ("age: {}".format(e1.age))
+        *Output*
+        Name: Bhavana
+        age: 24
 
     Untuk kelas Employee di atas, setiap objek yang kita deklarasikan akan memiliki nilai yang sama untuk variabel instance name dan age. Untuk mendeklarasikan objek dengan atribut yang bervariasi alih-alih default, tentukan argumen untuk metode __init__().
 
@@ -177,23 +177,23 @@
     *Contoh*
     Dalam contoh ini, konstruktor __init__() memiliki dua argumen formal.Mendeklarasikan objek Employee dengan nilai yang berbeda
     
-    class Employee:
-        'Common base class for all employees'
-        def __init__(self, name, age):
-            self.name = name
-            self.age = age
-
-    e1 = Employee("Bhavana", 24)
-    e2 = Employee("Bharat", 25)
-
-    print ("Name: {}".format(e1.name))
-    print ("age: {}".format(e1.age))
-    print ("Name: {}".format(e2.name))
-    print ("age: {}".format(e2.age))
-    *Output*
-    Name: Bhavana
-    age: 24
-    Name: Bharat
-    age: 25
+        class Employee:
+            'Common base class for all employees'
+            def __init__(self, name, age):
+                self.name = name
+                self.age = age
+    
+        e1 = Employee("Bhavana", 24)
+        e2 = Employee("Bharat", 25)
+    
+        print ("Name: {}".format(e1.name))
+        print ("age: {}".format(e1.age))
+        print ("Name: {}".format(e2.name))
+        print ("age: {}".format(e2.age))
+        *Output*
+        Name: Bhavana
+        age: 24
+        Name: Bharat
+        age: 25
 
     Anda juga dapat menetapkan nilai default ke argumen formal dalam konstruktor sehingga objek dapat dibuat instans dengan atau tanpa meneruskan parameter.
