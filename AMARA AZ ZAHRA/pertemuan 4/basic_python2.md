@@ -32,19 +32,20 @@
     p1 = MyClass()
     print(p1.x)
 
-    EXAMPLE:
-    # defining class
+    *EXAMPLE:*
+   
+    #defining class
     class Smartphone:
-        # constructor    
+        #constructor    
         def __init__(self, device, brand):
             self.device = device
             self.brand = brand
     
-        # method of the class
+        #method of the class
         def description(self):
             return f"{self.device} of {self.brand} supports Android 14"
 
-        # creating object of the class
+        #creating object of the class
         phoneObj = Smartphone("Smartphone", "Samsung")
         print(phoneObj.description())
         OUTPUT: "Smartphone of Samsung supports Android 14"
@@ -52,9 +53,10 @@
     # The __init__() Function
     Untuk memahami arti kelas kita harus memahami __init__() bawaan fungsi.
     Semua kelas memiliki fungsi yang disebut __init__(), yang selalu dieksekusi ketika Kelas sedang dimulai.
-    Gunakan fungsi __init__() untuk menetapkan nilai ke properti objek, atau lainnya operasi yang perlu dilakukan ketika objek sedang dibuat:
+    Gunakan fungsi __init__() untuk menetapkan nilai ke properti objek, atau lainnya operasi yang perlu dilakukan ketika       objek sedang dibuat:
     *Contoh*
     Buat kelas bernama Person, gunakan fungsi __init__() untuk menetapkan nilai Untuk nama dan usia:
+   
     class Person:
         def __init__(self, name, age):
             self.name = name
@@ -71,6 +73,7 @@
     Jika fungsi __str__() tidak diatur, representasi string dari objek dikembalikan:
     Contoh
     Representasi string dari objek DENGAN fungsi __str__():
+   
     class Person:
         def __init__(self, name, age):
             self.name = name
@@ -81,7 +84,7 @@
     print(p1)
     Output: "Rara(19)"
 
-3. **Python-Attributes**
+4. **Python-Attributes**
     Atribut adalah variabel yang terkait dengan objek dan digunakan untuk menyimpan data tentang objek tersebut. Atribut didefinisikan di dalam kelas.
     Setiap atribut akan memiliki nilai yang terkait dengannya. Atribut setara dengan data.
     * Name, class, subjects, marks, etc., of student
@@ -98,6 +101,7 @@
     Nama objek diikuti dengan notasi titik (.) digunakan untuk mengakses atribut kelas.
     *Contoh*
     Contoh di bawah ini menunjukkan cara mengakses atribut kelas Python.
+   
     class Employee:
         name = "Amara Az Zahra"
         age = "19"
@@ -115,11 +119,12 @@
     * Atribut kelas dapat digunakan untuk mengatur nilai default untuk objek.
     * Ini juga berguna dalam membuat singleton. Mereka adalah objek yang dibuat hanya sekali dan digunakan di berbagai bagian kode.
 
-4. **Python-Methods**
+6. **Python-Methods**
     Metode adalah fungsi yang terkait dengan objek dan digunakan untuk melakukan tindakan atau operasi pada objek. Metode juga didefinisikan di dalam kelas.
     Objek juga dapat berisi metode. Metode dalam objek adalah fungsi yang milik objek.
     Contoh
     Masukkan fungsi yang mencetak salam, dan jalankan pada objek p1:
+   
     class Person:
         def __init__(self, name, age):
             self.name = name
@@ -131,7 +136,7 @@
     Output: "Hello my name is Rara"
     *Nota: Parameter adalah referensi ke instance kelas saat ini, dan digunakan untuk mengakses variabel yang termasuk dalam kelas.* **self**
 
-5. **Python-Constructors**
+8. **Python-Constructors**
     Konstruktor Python adalah metode instance dalam kelas, yang secara otomatis dipanggil setiap kali objek baru dari kelas dibuat. Peran konstruktor adalah untuk menetapkan nilai ke variabel instance segera setelah objek dideklarasikan.
 
     Python menggunakan metode khusus yang disebut __init__() untuk menginisialisasi variabel instance untuk objek, segera setelah dideklarasikan.
