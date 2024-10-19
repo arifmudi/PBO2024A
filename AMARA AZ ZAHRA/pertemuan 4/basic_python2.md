@@ -20,7 +20,7 @@
     Example
     Create a class named MyClass, with a property named x:
 
-    class MyClass:
+        class MyClass:
         x = 5
 
     Objek adalah instance dari kelas. Ketika Anda membuat objek, Anda membuat instansi kelas dengan atribut dan metode yang telah ditentukan oleh kelas.
@@ -29,8 +29,8 @@
     Example
     Create an object named p1, and print the value of x:
 
-    p1 = MyClass()
-    print(p1.x)
+        p1 = MyClass()
+        print(p1.x)
 
     *EXAMPLE:*
    
@@ -40,11 +40,9 @@
         def __init__(self, device, brand):
             self.device = device
             self.brand = brand
-    
         #method of the class
         def description(self):
             return f"{self.device} of {self.brand} supports Android 14"
-
         #creating object of the class
         phoneObj = Smartphone("Smartphone", "Samsung")
         print(phoneObj.description())
