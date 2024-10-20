@@ -1,0 +1,43 @@
+Nama   : M.Abdi Ahzani
+Nim    : 2355201036
+Matkul : PBO
+prodi  : S1 Teknik Informatika
+
+
+											PENDAHULUAN
+Dalam Python, variabel adalah tempat untuk menyimpan data. Variabel memungkinkan kita untuk memberi nama pada data sehingga kita dapat mengakses dan memanipulasinya dengan lebih mudah. Saat kita membuat variabel, kita dapat menyimpan berbagai tipe data, seperti angka, teks, daftar, dan banyak lagi.
+
+Contoh pembuatan variabel dalam Python:
+# Membuat variabel
+nama = "Alice"  # Tipe data string
+umur = 25       # Tipe data integer
+tinggi = 1.65   # Tipe data float
+hobi = ["membaca", "bersepeda", "bermain musik"]  # Tipe data list
+
+# Mengakses variabel
+print(nama)  # Output: Alice
+print(umur)  # Output: 25
+
+Variabel dalam Python tidak perlu dideklarasikan dengan tipe tertentu, karena Python adalah bahasa pemrograman yang dinamis, yang artinya tipe data dapat berubah seiring waktu.
+
+---------------------------------------------------------------------------------------------------------------
+
+											VARIABEL 
+Dalam konteks pemrograman atau matematika, variabel adalah simbol yang digunakan untuk menyimpan nilai atau data. Misalnya, dalam pemrograman, kamu bisa menggunakan variabel untuk menyimpan angka, teks, atau objek lainnya. Dalam matematika, variabel sering digunakan untuk mewakili angka yang belum diketahui.
+
+---------------------------------------------------------------------------------------------------------------
+
+											TIPE DATA 
+Tipe data variabel merujuk pada jenis nilai yang dapat disimpan dalam variabel dan operasi yang dapat dilakukan pada nilai tersebut. Tipe data membantu komputer memahami bagaimana menangani informasi yang disimpan. Berikut adalah beberapa tipe data variabel yang umum digunakan:
+
+Integer: Menyimpan bilangan bulat, seperti -1, 0, atau 42.
+
+Float (atau Double): Menyimpan bilangan desimal, seperti 3.14 atau -0.001.
+
+String: Menyimpan teks, seperti "Hello, World!" atau "Variabel".
+
+Boolean: Menyimpan nilai benar atau salah (true/false).
+
+Array: Menyimpan kumpulan nilai dari tipe data yang sama, seperti daftar angka atau string.
+
+Object: Tipe data yang lebih kompleks yang dapat menyimpan berbagai tipe data dalam satu entitas, biasanya digunakan dalam pemrograman berorientasi objek.
