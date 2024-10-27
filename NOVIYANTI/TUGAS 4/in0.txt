@@ -1,0 +1,34 @@
+nama saya 
+noviyanti
+teknik informatika######## 
+Min: 11 karakter
+Max: 18 karakter
+Range: 7 karakter
+######## 
+Min: 11 karakter
+Max: 28 karakter
+Range: 17 karakter
+######## 
+Min: 10 karakter
+Max: 28 karakter
+Range: 18 karakter
+######## 
+Min: 10 karakter
+Max: 28 karakter
+Range: 18 karakter
+###########
+Min: 9 karakter
+Max: 27 karakter
+Range: 18 karakter
+######## 
+Min: 10 karakter
+Max: 28 karakter
+Range: 18 karakter
+######## 
+Min: 10 karakter
+Max: 28 karakter
+Range: 18 karakter
+###########
+Min: 9 karakter
+Max: 27 karakter
+Range: 18 karakter
