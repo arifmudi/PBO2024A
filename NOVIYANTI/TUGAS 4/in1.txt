@@ -1,9 +1,2 @@
-pagi ini sangat cerah
-######## 
-Min: 31 karakter
-Max: 33 karakter
-Range: 2 karakter
-###########
-Min: 16 karakter
-Max: 40 karakter
-Range: 24 karakter
+pagi ini sangat cerah.
+
