@@ -1,4 +1,21 @@
-#                           CF2                                     #
+import os
+
+# Membuat file input jika belum ada
+def create_input_files():
+    file_contents = {
+        "in0.txt": "",
+        "in1.txt": "pagi ini sangat cerah.\n",
+        "in2.txt": "nama saya noviyanti.\nsaya prodi teknik informatika.\n",
+        "in3.txt": "baris pertama.\nbaris kedua.\nbaris ketiga.\n"
+    }
+
+    for filename, content in file_contents.items():
+        if not os.path.exists(filename):
+            with open(filename, "w") as file:
+                file.write(content)
+    print("File in0.txt, in1.txt, in2.txt, dan in3.txt telah berhasil dibuat atau sudah ada sebelumnya.")
+
+# Kelas IOException untuk membaca, menghitung, dan menulis statistik file
 class IOException:
     def __init__(self, filename):
         # Menginisialisasi kelas IOException dengan nama file
@@ -62,6 +79,9 @@ class IOException:
         print("File tidak berisi teks. Ditulis 'NULL' ke dalam file.")
 
 def main():
+    # Membuat file input jika belum ada
+    create_input_files()
+
     # Meminta pengguna untuk memasukkan nama file dan menginisialisasi IOException dengan nama tersebut.
     in_filename = input("Masukkan nama file input: ")
     IOException(in_filename)
@@ -69,4 +89,3 @@ def main():
 # Menjalankan fungsi main jika script dijalankan langsung.
 if __name__ == "__main__":
     main()
-
