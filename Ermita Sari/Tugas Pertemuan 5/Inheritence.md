@@ -1,21 +1,21 @@
 1. Single Inheritence
     -Ini merupakan bentuk pewarisan paling sederhana di mana kelas anak mewarisi atribut dan metode hanya dari satu kelas induk.
     -implementasi:
-# parent class
+#parent class
 class Parent: 
    def parentMethod(self):
       print ("Calling parent method")
 
-# child class
+#child class
 class Child(Parent): 
    def childMethod(self):
       print ("Calling child method")
 
-# instance of child
+#instance of child
 c = Child()  
-# calling method of child class
+#calling method of child class
 c.childMethod() 
-# calling method of parent class
+#calling method of parent class
 c.parentMethod() 
 
 outputnya:
@@ -27,7 +27,7 @@ Calling parent method
 2. Super Inheritence
     - konsep: fungsi super() memungkinkan Anda mengakses metode dan atribut kelas induk dari dalam kelas anak.
     - implementasinya:
-# parent class
+#parent class
 class ParentDemo:
    def __init__(self, msg):
       self.message = msg
@@ -35,13 +35,13 @@ class ParentDemo:
    def showMessage(self):
       print(self.message)
 
-# child class
+#child class
 class ChildDemo(ParentDemo):
    def __init__(self, msg):
       # use of super function
       super().__init__(msg)  
 
-# creating instance
+#creating instance
 obj = ChildDemo("Welcome to UP!!")
 obj.showMessage() 
 
@@ -109,24 +109,24 @@ divmod: (3.3333333333333335, 1)
             -Buat Kelas Turunan Lebih Lanjut jika diperlukan, mewarisi dari kelas turunan sebelumnya.
             -Gunakan Kelas Turunan untuk membuat objek dan mengakses metode dari semua tingkat pewarisan.
     -contoh code:
-# parent class
+#parent class
 class Universe: 
    def universeMethod(self):
       print ("I am in the Universe")
 
-# child class
+#child class
 class Earth(Universe): 
    def earthMethod(self):
       print ("I am on Earth")
       
-# another child class
+#another child class
 class India(Earth): 
    def indianMethod(self):
       print ("I am in India")      
 
-# creating instance 
+#creating instance 
 person = India()  
-# method calls
+#method calls
 person.universeMethod() 
 person.earthMethod() 
 person.indianMethod() 
@@ -147,25 +147,25 @@ I am in India
             -Definisikan Kelas Turunan: Buat beberapa kelas turunan yang mewarisi dari kelas induk dan menambahkan fungsionalitas spesifik mereka sendiri.
             -Gunakan Kelas Turunan: Buat objek dari kelas turunan dan akses metode dari kelas induk dan kelas turunan.
     -contoh code:
-# parent class
+#parent class
 class Manager: 
    def managerMethod(self):
       print ("I am the Manager")
 
-# child class
+#child class
 class Employee1(Manager): 
    def employee1Method(self):
       print ("I am Employee one")
       
-# second child class
+#second child class
 class Employee2(Manager): 
    def employee2Method(self):
       print ("I am Employee two")      
 
-# creating instances 
+#creating instances 
 emp1 = Employee1()  
 emp2 = Employee2()
-# method calls
+#method calls
 emp1.managerMethod() 
 emp1.employee1Method()
 emp2.managerMethod() 
@@ -189,7 +189,7 @@ I am Employee two
             -Definisikan Kelas Turunan Lainnya: Jika diperlukan, Anda dapat membuat kelas turunan lainnya yang mewarisi dari kelas turunan pertama.
             -Gunakan Kelas Turunan: Buat objek dari kelas turunan dan akses metode dari kelas induk dan kelas turunan sesuai kebutuhan.
     -contoh code:
-# parent class
+#parent class
 class CEO: 
    def ceoMethod(self):
       print ("I am the CEO")
@@ -206,9 +206,9 @@ class Employee2(Manager, CEO):
    def employee2Method(self):
       print ("I am Employee two")      
 
-# creating instances 
+#creating instances 
 emp = Employee2()
-# method calls
+#method calls
 emp.managerMethod() 
 emp.ceoMethod()
 emp.employee2Method()
@@ -310,7 +310,7 @@ Contoh Penggunaan:
 -Soal Cerita
 Seorang pengembang game ingin membuat simulasi mobil balap. Dalam simulasi ini, ada berbagai jenis mobil balap, seperti mobil sport dan mobil F1. Semua mobil memiliki beberapa atribut dan metode dasar, tetapi setiap jenis mobil memiliki beberapa perilaku dan fitur yang berbeda. Pengembang ingin menggunakan pewarisan untuk mengorganisir kode dan memungkinkan kemudahan dalam pengelolaan serta pengembangan di masa depan.
 
-# Kelas induk
+#Kelas induk
 class MobilBalap:
     def __init__(self, merek, model, kecepatan_maks):
         self.merek = merek  # Merek mobil
@@ -326,7 +326,7 @@ class MobilBalap:
         return f"{self.merek} {self.model} sedang mengakselerasi!"
 
 
-# Kelas turunan untuk mobil sport
+#Kelas turunan untuk mobil sport
 class MobilSport(MobilBalap):
     def __init__(self, merek, model, kecepatan_maks, tipe_mesin):
         super().__init__(merek, model, kecepatan_maks)  # Memanggil konstruktor kelas induk
@@ -337,7 +337,7 @@ class MobilSport(MobilBalap):
         return f"{super().info()} Tipe mesin: {self.tipe_mesin}."
 
 
-# Kelas turunan untuk mobil F1
+#Kelas turunan untuk mobil F1
 class MobilF1(MobilBalap):
     def __init__(self, merek, model, kecepatan_maks, tim):
         super().__init__(merek, model, kecepatan_maks)  # Memanggil konstruktor kelas induk
@@ -352,11 +352,11 @@ class MobilF1(MobilBalap):
         return f"{self.merek} {self.model} F1 sedang mengakselerasi dengan kecepatan luar biasa!"
 
 
-# Membuat objek dari kelas-kelas tersebut
+#Membuat objek dari kelas-kelas tersebut
 mobil1 = MobilSport("Ferrari", "488", 330, "V8")
 mobil2 = MobilF1("Mercedes", "W12", 360, "Mercedes AMG Petronas")
 
-# Menampilkan informasi tentang mobil
+#Menampilkan informasi tentang mobil
 print(mobil1.info())  # Menampilkan informasi mobil sport
 print(mobil1.akselerasi())  # Menggunakan metode akselerasi
 
