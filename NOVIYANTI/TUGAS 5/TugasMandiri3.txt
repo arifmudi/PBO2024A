@@ -1,0 +1,321 @@
+A. Konsep Pewarisan Tunggal (Single Inheritance)
+    Pewarisan Tunggal adalah konsep di mana sebuah kelas (subclass) mewarisi dari satu 
+kelas lain (superclass). Ini memungkinkan subclass untuk menggunakan atribut dan metode 
+dari superclass, sehingga memudahkan penggunaan kembali kode dan meningkatkan modularitas.
+
+    Kapan Menggunakan Single Inheritance:
+* Sederhana: Ketika satu subclass hanya membutuhkan atribut dan metode dari satu superclass.
+* Hubungan 'is-a': Ketika ada hubungan jelas antara subclass dan superclass, 
+seperti "Mahasiswa adalah Dosen."
+* Meningkatkan keterbacaan: Mengurangi kompleksitas kode dengan membatasi hierarki pewarisan.
+
+    Implementasi dalam Python :
+class Dosen:
+    def __init__(self, nama, mata_kuliah):
+        self.nama = nama
+        self.mata_kuliah = mata_kuliah
+
+    def ajar(self):
+        return f"{self.nama} mengajar {self.mata_kuliah}."
+
+class Mahasiswa(Dosen):  # Single Inheritance
+    def __init__(self, nama, mata_kuliah, nim):
+        super().__init__(nama, mata_kuliah)
+        self.nim = nim
+
+    def info(self):
+        return f"Nama: {self.nama}, NIM: {self.nim}"
+
+mahasiswa1 = Mahasiswa("Novi", "Matematika", "2355201014")
+print(mahasiswa1.ajar())
+print(mahasiswa1.info())
+
+
+B. Konsep dari Super untuk Mewarisi di Konstruktor
+    Super adalah fungsi built-in di Python yang digunakan untuk memanggil metode dari superclass. 
+Dalam konteks pewarisan, ini sangat penting untuk memastikan bahwa konstruktor superclass dipanggil 
+untuk menginisialisasi atribut yang diperlukan.
+
+    Manfaatnya:
+* Konsistensi: Memastikan bahwa semua atribut dari superclass diinisialisasi dengan benar.
+* Penghindaran duplikasi kode: Mengurangi pengulangan logika yang sama di berbagai subclass.
+* Mempermudah perubahan: Jika ada perubahan di superclass, subclass yang menggunakan super() 
+tidak perlu diubah.
+
+    Implementasi dalam Python:
+class Person:
+    def __init__(self, nama):
+        self.nama = nama
+
+class Mahasiswa(Person):
+    def __init__(self, nama, nim):
+        super().__init__(nama)  # Memanggil konstruktor dari superclass
+        self.nim = nim
+
+mahasiswa2 = Mahasiswa("Novi", "2355201014")
+print(mahasiswa2.nama)  # Mengakses atribut dari superclass
+
+
+C. Jenis-Jenis Inheritance
+    Terdapat beberapa jenis pewarisan, masing-masing dengan karakteristik dan kegunaan yang berbeda:
+
+1. Multiple
+    Kelas mewarisi dari lebih dari satu kelas.
+Contoh penggunaan:
+Kelas C yang mewarisi dari kelas A dan B.
+
+2. Multilevel
+    Pewarisan dalam beberapa tingkatan.
+Contoh penggunaan:
+Kelas A menjadi superclass dari B, dan B menjadi superclass dari C.
+
+3. Hierarchical
+    Beberapa subclass mewarisi dari satu superclass.
+Contoh penggunaan:
+Kelas B dan C mewarisi dari kelas A.
+
+4. Hybrid
+    Kombinasi dari beberapa tipe pewarisan.
+Contoh penggunaan:
+Kelas C yang mewarisi dari kelas A (multilevel) dan B (multiple).
+
+    Contoh Implementasi:
+  # Multiple Inheritance
+class Dosen:
+    def mengajar(self):
+        return "Mengajar"
+
+class Peneliti:
+    def melakukan_penelitian(self):
+        return "Melakukan penelitian"
+
+class DosenPeneliti(Dosen, Peneliti):  # Multiple Inheritance
+    def info(self):
+        return "Saya adalah dosen yang juga peneliti."
+
+# Multilevel Inheritance
+class Fakultas:
+    def info(self):
+        return "Ini adalah Fakultas."
+
+class Jurusan(Fakultas):
+    def info(self):
+        return "Ini adalah Jurusan."
+
+class ProgramStudi(Jurusan):
+    def info(self):
+        return "Ini adalah Program Studi."
+
+# Hierarchical Inheritance
+class Universitas:
+    def info(self):
+        return "Ini adalah Universitas."
+
+class FakultasEkonomi(Universitas):
+    def info(self):
+        return "Ini adalah Fakultas Ekonomi."
+
+class FakultasTeknik(Universitas):
+    def info(self):
+        return "Ini adalah Fakultas Teknik."
+
+# Hybrid Inheritance
+class Dosen:
+    def mengajar(self):
+        return "Mengajar"
+
+class Peneliti:
+    def melakukan_penelitian(self):
+        return "Melakukan penelitian"
+
+class DosenEkonomi(Dosen):
+    def info(self):
+        return "Dosen Ekonomi"
+
+class DosenPeneliti(DosenEkonomi, Peneliti):  # Hybrid Inheritance
+    def info_peneliti(self):
+        return "Dosen Ekonomi dan Peneliti"
+
+
+D. Override Method
+    Override Method adalah penulisan ulang metode yang ada dalam superclass. Ini memungkinkan subclass 
+untuk mengubah perilaku metode agar sesuai dengan kebutuhan spesifik.
+
+    Manfaatnya:
+* Kustomisasi: Memungkinkan subclass untuk menyesuaikan atau mengganti implementasi metode yang diwarisi.
+* Polimorfisme: Memungkinkan objek subclass diperlakukan sebagai objek superclass sambil menggunakan 
+metode yang dioverride.
+
+    Implementasi dalam Python:
+ class Dosen:
+    def mengajar(self):
+        return "Mengajar kelas dasar."
+
+class DosenMatematika(Dosen):
+    def mengajar(self):  # Override Method
+        return "Mengajar kelas Matematika."
+
+dosen1 = DosenMatematika()
+print(dosen1.mengajar())  # Menggunakan metode yang dioverride
+
+
+E. Kapan Menggunakan Pewarisan ?
+* Hubungan 'is-a': Gunakan pewarisan ketika ada hubungan yang jelas antara subclass dan superclass, 
+seperti "Mahasiswa adalah Dosen."
+* Reusabilitas: Saat ingin berbagi atribut dan metode di antara beberapa kelas untuk menghindari 
+duplikasi kode.
+* Menyederhanakan Kode: Ketika pewarisan dapat mengurangi kompleksitas dan meningkatkan struktur program, 
+memudahkan pemeliharaan dan pembacaan kode.
+* Membutuhkan Fitur dari Superclass: Ketika subclass membutuhkan perilaku atau atribut dari superclass 
+untuk berfungsi dengan baik.
+* Desain yang Konsisten: Saat membangun hierarki kelas yang logis dan konsisten, memudahkan pengembangan 
+dan pemeliharaan sistem.
+
+
+F. Kapan Menggunakan Non-Pewarisan (Komposisi) ?
+* Hubungan 'has-a': Gunakan komposisi ketika ada hubungan antara objek yang tidak mencerminkan pewarisan, 
+seperti "Mahasiswa memiliki Dosen sebagai pembimbing."
+* Menghindari Kompleksitas: Komposisi seringkali lebih sederhana dan lebih mudah dikelola daripada pewarisan 
+berlapis yang rumit.
+* Fleksibilitas: Memungkinkan objek untuk berubah tanpa mempengaruhi hierarki kelas yang ada, memudahkan 
+adaptasi terhadap perubahan kebutuhan.
+* Pemeliharaan Kode yang Lebih Baik: Mengurangi ketergantungan antar kelas, sehingga memudahkan pemeliharaan 
+dan pengujian unit.
+* Reusabilitas yang Lebih Baik: Memungkinkan kelas untuk menggunakan kembali fungsionalitas dari beberapa 
+kelas tanpa terikat pada satu hierarki pewarisan.
+
+
+G. Studi Kasus
+
+    Studi Kasus: Sistem Manajemen Universitas
+
+    Di Universitas XYZ, terdapat berbagai jenis pengguna yang berinteraksi dengan sistem manajemen akademik, 
+termasuk mahasiswa, dosen, dan administrator. Sistem ini dirancang untuk mengelola data mahasiswa dan dosen, 
+kursus yang ditawarkan, dan pendaftaran mata kuliah. Universitas ingin meningkatkan efisiensi dan kemudahan 
+penggunaan sistem dengan menggunakan prinsip-prinsip pemrograman berorientasi objek, termasuk pewarisan dan 
+komposisi.
+
+1. Pengguna Sistem:
+
+* Mahasiswa: Dapat mendaftar untuk kursus, melihat jadwal, dan mendapatkan informasi tentang dosen pembimbing 
+mereka.
+* Dosen: Mengajar kursus dan membimbing mahasiswa.
+* Administrator: Mengelola data mahasiswa dan dosen, termasuk pendaftaran dan penghapusan data.
+
+2. Hubungan antar Entitas:
+
+* Mahasiswa "memiliki" Dosen sebagai pembimbing.
+* Dosen "mengajar" berbagai kursus.
+* Administrator "mengelola" semua data.
+
+3. Desain Kelas
+    ~ Kelas Dasar (Superclass):
+* Kelas Pengguna sebagai superclass untuk semua jenis pengguna.
+
+    ~Kelas Subclass:
+* Kelas Mahasiswa dan Dosen mewarisi dari kelas Pengguna.
+* Kelas Administrator juga mewarisi dari kelas Pengguna.
+
+    ~ Kelas Kursus:
+* Kelas Kursus untuk menyimpan informasi tentang mata kuliah, termasuk dosen pengajar.
+
+    Implementasi Kode
+Berikut adalah implementasi sistem manajemen universitas menggunakan Python:
+
+    # Superclass untuk semua pengguna
+class Pengguna:
+    def __init__(self, nama, email):
+        self.nama = nama
+        self.email = email
+
+    def info(self):
+        return f"Nama: {self.nama}, Email: {self.email}"
+
+# Subclass Mahasiswa
+class Mahasiswa(Pengguna):
+    def __init__(self, nama, email, nim):
+        super().__init__(nama, email)
+        self.nim = nim
+        self.kursus = []
+
+    def mendaftar_kursus(self, kursus):
+        self.kursus.append(kursus)
+        kursus.tambah_mahasiswa(self)
+
+    def info(self):
+        kursus_list = ", ".join(kursus.nama for kursus in self.kursus)
+        return f"{super().info()}, NIM: {self.nim}, Kursus Terdaftar: {kursus_list}"
+
+# Subclass Dosen
+class Dosen(Pengguna):
+    def __init__(self, nama, email, nip):
+        super().__init__(nama, email)
+        self.nip = nip
+        self.kursus_diampu = []
+
+    def mengajar(self, kursus):
+        self.kursus_diampu.append(kursus)
+        kursus.set_dosen(self)
+
+    def info(self):
+        kursus_list = ", ".join(kursus.nama for kursus in self.kursus_diampu)
+        return f"{super().info()}, NIP: {self.nip}, Kursus Diampu: {kursus_list}"
+
+# Kelas Kursus
+class Kursus:
+    def __init__(self, nama):
+        self.nama = nama
+        self.dosen = None
+        self.mahasiswa_list = []
+
+    def set_dosen(self, dosen):
+        self.dosen = dosen
+
+    def tambah_mahasiswa(self, mahasiswa):
+        self.mahasiswa_list.append(mahasiswa)
+
+    def info(self):
+        return f"Kursus: {self.nama}, Dosen: {self.dosen.nama if self.dosen else 'Belum ada dosen'}"
+
+# Subclass Administrator
+class Administrator(Pengguna):
+    def __init__(self, nama, email):
+        super().__init__(nama, email)
+
+    def tambah_kursus(self, nama_kursus):
+        return Kursus(nama_kursus)
+
+# Contoh Penggunaan Sistem
+admin = Administrator("Novi", "novi@xyz.edu")
+dosen1 = Dosen("Dr. Lin", "lin@xyz.edu", "NIP12345")
+dosen2 = Dosen("Dr. Feng", "feng@xyz.edu", "NIP67890")
+
+kursus_matematika = admin.tambah_kursus("Matematika")
+kursus_fisika = admin.tambah_kursus("Fisika")
+
+dosen1.mengajar(kursus_matematika)
+dosen2.mengajar(kursus_fisika)
+
+mahasiswa1 = Mahasiswa("Naliya", "naliya@xyz.edu", "NIM001")
+mahasiswa2 = Mahasiswa("LIyana", "liyana@xyz.edu", "NIM002")
+
+mahasiswa1.mendaftar_kursus(kursus_matematika)
+mahasiswa2.mendaftar_kursus(kursus_fisika)
+
+# Menampilkan informasi
+print(dosen1.info())
+print(dosen2.info())
+print(mahasiswa1.info())
+print(mahasiswa2.info())
+
+# Menampilkan informasi kursus
+print(kursus_matematika.info())
+print(kursus_fisika.info())
+
+H. Kesimpulan
+    Pewarisan dalam pemrograman berorientasi objek, termasuk single dan multilevel inheritance, 
+memungkinkan penggunaan kembali kode dan pengorganisasian yang lebih baik. Penggunaan super() 
+membantu menginisialisasi atribut superclass, sedangkan metode override memungkinkan kustomisasi 
+perilaku di subclass. Pemilihan antara pewarisan dan komposisi bergantung pada hubungan antara 
+objek: pewarisan untuk "is-a" dan komposisi untuk "has-a". Studi kasus sistem manajemen universitas 
+menunjukkan penerapan konsep ini, meningkatkan efisiensi dan kemudahan penggunaan.
