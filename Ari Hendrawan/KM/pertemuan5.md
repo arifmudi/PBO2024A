@@ -147,7 +147,6 @@ penggunaan super inheritance dapat digunakan jika pada saat membuat sebuah subcl
                     def ekolokasi(self):
                         print("menggunnakan ekolokasi")
 
-
 +---------------------------+-------------------------------------------------------+---------------------------------------------------+
 |   Jenis                   |   Deskripsi                                           |   Contoh Penggunaan                               |
 |   Inheritance             |                                                       |                                                   |
@@ -231,18 +230,15 @@ Kapan Menggunakan Non-Pewarisan (Non-Composition)
                 def info(self):
                     return f"Jenis Kapal: {self.jenis}, Tahun Dibuat: {self.tahun_dibuat}, Total Muatan: {self.total_muatan} ton"
 
-
             # class Kapal Cargo
             class KapalCargo(Kapal):
                 def __init__(self, tahun_dibuat, total_muatan):
                     super().__init__("Kapal Cargo", tahun_dibuat, total_muatan)
 
-
             # class Kapal Tempur
             class KapalTempur(Kapal):
                 def __init__(self, tahun_dibuat, total_muatan):
                     super().__init__("Kapal Tempur", tahun_dibuat, total_muatan)
-
 
             # class Kapal Ikan
             class KapalIkan(Kapal):
@@ -255,8 +251,6 @@ Kapan Menggunakan Non-Pewarisan (Non-Composition)
                 def __init__(self, tahun_dibuat, total_muatan):
                     super().__init__("Kapal Penumpang", tahun_dibuat, total_muatan)
 
-
-
             def main():
                 kapal_cargo = KapalCargo(2010, 2000)
                 kapal_tempur = KapalTempur(2015, 1500)
@@ -265,7 +259,6 @@ Kapan Menggunakan Non-Pewarisan (Non-Composition)
 
                 for kapal in [kapal_cargo, kapal_tempur, kapal_ikan, kapal_penumpang]:
                     print(kapal.info())
-
 
             if __name__ == "__main__":
                 main()
