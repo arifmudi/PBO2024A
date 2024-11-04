@@ -6,20 +6,20 @@ Single inheritance adalah konsep dimana sebuah class hanya mewarisi dari satu cl
 
 ### Implementasi:
 ```python
-class Animal:
+class car:
     def __init__(self, name):
         self.name = name
     
     def speak(self):
         pass
 
-class Dog(Animal):
+class toyota(car):
     def speak(self):
-        return f"{self.name} says Woof!"
+        return f"{self.name} Hand Brake!"
 
 # Penggunaan
-dog = Dog("Buddy")
-print(dog.speak())  # Output: Buddy says Woof!
+toyota = toyota("Buddy")
+print(toyota.speak()) 
 ```
 
 ### Kapan Menggunakan:
