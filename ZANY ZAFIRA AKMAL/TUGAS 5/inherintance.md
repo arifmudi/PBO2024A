@@ -158,4 +158,124 @@ make_sound(cat)  # Output: Meow!
 5. **Mendukung Penggunaan Kembali Kode:**
    - Komposisi memungkinkan Anda untuk menggunakan kembali kode dari beberapa kelas tanpa membuat hierarki yang dalam. Anda dapat menggabungkan beberapa komponen untuk membentuk objek yang lebih kompleks.
 
+7.Studi Kasus
+Sistem Manajemen Hewan di Kebun Binatang
+
+Di sebuah kebun binatang, manajer kebun binatang ingin mengelola berbagai jenis hewan yang ada. Setiap hewan memiliki beberapa sifat dan perilaku yang sama, tetapi setiap jenis hewan juga memiliki perilaku khusus yang berbeda.
+
+Manajer memutuskan untuk membuat sistem yang dapat mengelola hewan-hewan ini dengan cara yang efisien. Mereka memutuskan untuk menggunakan pewarisan untuk mengelompokkan hewan ke dalam kategori umum (seperti mamalia, burung, dan reptil) dan komposisi untuk mengelola perilaku spesifik dari setiap hewan, seperti suara yang dihasilkan dan cara mereka bergerak.
+
+Implementasi Kode:
+Berikut adalah implementasi kode untuk studi kasus ini:
+# Kelas induk untuk semua hewan
+class Animal:
+    def __init__(self, name):
+        self.name = name
+    
+    def make_sound(self):
+        raise NotImplementedError("Subclass must implement this method")
+
+    def move(self):
+        raise NotImplementedError("Subclass must implement this method")
+
+# Kelas turunan untuk Mamalia
+class Mammal(Animal):
+    def __init__(self, name, fur_color):
+        super().__init__(name)
+        self.fur_color = fur_color
+
+    def move(self):
+        return f"{self.name} is walking on four legs."
+
+# Kelas turunan untuk Burung
+class Bird(Animal):
+    def __init__(self, name, wing_span):
+        super().__init__(name)
+        self.wing_span = wing_span
+
+    def make_sound(self):
+        return "Chirp!"
+
+    def move(self):
+        return f"{self.name} is flying."
+
+# Kelas turunan untuk Reptil
+class Reptile(Animal):
+    def __init__(self, name, scale_color):
+        super().__init__(name)
+        self.scale_color = scale_color
+
+    def make_sound(self):
+        return "Hiss!"
+
+    def move(self):
+        return f"{self.name} is slithering."
+
+# Komposisi untuk suara hewan
+class AnimalSound:
+    def __init__(self, sound):
+        self.sound = sound
+
+    def produce_sound(self):
+        return self.sound
+
+# Menggunakan komposisi untuk suara hewan tertentu
+class Dog(Mammal):
+    def __init__(self, name, fur_color):
+        super().__init__(name, fur_color)
+        self.sound = AnimalSound("Bark!")
+
+    def make_sound(self):
+        return self.sound.produce_sound()
+
+class Parrot(Bird):
+    def __init__(self, name, wing_span):
+        super().__init__(name, wing_span)
+        self.sound = AnimalSound("Squawk!")
+
+    def make_sound(self):
+        return self.sound.produce_sound()
+
+# Membuat objek hewan
+dog = Dog("Buddy", "Golden")
+parrot = Parrot("Polly", "15 inches")
+snake = Reptile("Slither", "Green")
+
+# Menggunakan objek
+animals = [dog, parrot, snake]
+
+for animal in animals:
+    print(f"{animal.name}:")
+    print(f"  Sound: {animal.make_sound()}")
+    print(f"  Movement: {animal.move()}\n")
+    
+Penjelasan Kode:
+-Kelas Induk (Animal): Kelas ini berfungsi sebagai kelas dasar untuk semua hewan. Ini memiliki metode make_sound dan move yang akan diimplementasikan di kelas turunan.
+
+-Kelas Turunan (Mammal, Bird, Reptile): Kelas-kelas ini mewarisi dari kelas Animal dan mengimplementasikan metode make_sound dan move sesuai dengan perilaku masing-masing jenis hewan. Setiap kelas juga menambahkan atribut 
+ spesifik (seperti fur_color untuk mamalia).
+
+-Komposisi (AnimalSound): Kelas ini digunakan untuk mengelola suara hewan. Kelas Dog dan Parrot menggunakan komposisi untuk menentukan suara mereka dengan membuat objek AnimalSound.
+
+-Membuat Objek: Contoh objek hewan (Dog, Parrot, dan Reptile) dibuat dan dimasukkan ke dalam daftar animals.
+
+-Menampilkan Informasi: Kode melakukan iterasi pada daftar hewan dan menampilkan nama, suara, dan cara bergerak masing-masing hewan.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
