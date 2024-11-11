@@ -1,0 +1,24 @@
+1. Konsep Dasar OOP (Object-Oriented Programming)
+
+OOP atau Object-Oriented Programming adalah paradigma pemrograman yang berbasis pada konsep "objek." Objek-objek ini merupakan representasi dari entitas dalam dunia nyata dan memiliki karakteristik serta kemampuan tersendiri. OOP memudahkan pengembangan dan pemeliharaan kode dengan cara mengelompokkan data dan fungsi yang berkaitan dalam satu kesatuan. Prinsip utama OOP meliputi:
+Encapsulation: Pembungkusan data dan fungsi dalam objek agar lebih terlindungi dan tidak mudah diubah oleh luar.
+Inheritance: Pewarisan sifat dari kelas induk ke kelas turunan untuk meminimalkan duplikasi kode.
+Polymorphism: Kemampuan untuk memiliki bentuk atau perilaku yang berbeda-beda, bergantung pada konteks.
+Abstraction: Penyederhanaan representasi data dengan menyembunyikan detail yang kompleks dan hanya menampilkan yang penting.
+
+2. Class dan Object
+
+Class: Kelas adalah blueprint atau template yang mendefinisikan properti dan perilaku umum dari sebuah objek. Di dalam kelas, kita mendefinisikan atribut (sifat) dan metode (fungsi) yang menggambarkan karakteristik dan aksi yang dimiliki oleh objek.
+Contoh: Jika kita memiliki kelas bernama Mobil, maka Mobil adalah cetak biru yang mendeskripsikan karakteristik umum dari setiap mobil.
+Object: Objek adalah instansiasi dari kelas, yaitu perwujudan nyata dari kelas dengan nilai yang spesifik. Setiap objek memiliki nilai atribut yang bisa berbeda-beda.
+Contoh: mobil1 dan mobil2 adalah objek dari kelas Mobil, di mana mobil1 memiliki warna "merah" dan mobil2 memiliki warna "biru."
+
+3. Atribut
+
+Atribut adalah data atau properti yang dimiliki oleh objek. Atribut ini menggambarkan karakteristik atau keadaan dari objek tersebut dan biasanya diinisialisasi saat objek dibuat. Pada contoh kelas Mobil, beberapa atribut yang mungkin ada adalah warna, merk, dan kecepatan.
+Contoh: mobil1.warna = "merah" dan mobil2.warna = "biru". Di sini, warna adalah atribut yang berbeda pada setiap objek.
+
+4. Metode (Method)
+
+Metode adalah fungsi yang didefinisikan di dalam kelas yang menggambarkan aksi atau perilaku yang dapat dilakukan oleh objek. Metode memungkinkan objek untuk melakukan suatu aksi atau mengubah nilai atribut. Metode ini sering kali bekerja dengan data atribut milik objek tersebut.
+Contoh: Pada kelas Mobil, bisa saja ada metode jalan() yang memungkinkan objek mobil1 untuk "berjalan" atau bergerak.
