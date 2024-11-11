@@ -1,3 +1,4 @@
+class countchars:
 def count_chars(filename):
     # Mencoba untuk membuka dan membaca file
     try:
