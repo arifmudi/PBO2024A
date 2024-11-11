@@ -1,0 +1,14 @@
+satu.
+Dua dua.
+Tiga tiga tiga.
+Emapat empat empat empat.
+Lima lima lima lima lima.
+###########
+Min: 5 karakter
+Max: 25 karakter
+Range: 20 karakter
+
+###########
+Min: 5 karakter
+Max: 25 karakter
+Range: 20 karakter

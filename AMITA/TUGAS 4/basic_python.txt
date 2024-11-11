@@ -1,0 +1,192 @@
+"Konsep Oop_python"
+OOP (Object-Oriented Programming) atau Pemrograman Berorientasi Objek adalah paradigma pemrograman yang 
+berfokus pada konsep "objek." Dalam OOP, program dibuat dengan membentuk objek-objek yang merupakan representasi
+dari entitas nyata atau abstrak dalam sistem yang ingin dibuat. OOP bertujuan untuk membuat kode yang lebih modular, mudah untuk dipelihara,dan lebih 
+mendekati cara manusia berpikir tentang masalah.
+
+OOP memiliki beberapa konsep dasar, yaitu:
+1.Kelas (Class): Kelas adalah blueprint atau cetak biru dari objek. Kelas mendefinisikan properti dan metode yang dimiliki oleh objek. 
+Contohnya, jika kita punya kelas "Mobil," maka atributnya bisa mencakup warna, merek, dan metode untuk menghidupkan mesin.
+
+2.Objek (Object): Objek adalah instance dari kelas. Ketika kelas diinstansiasi, ia menjadi objek yang memiliki nilai nyata untuk atribut yang ditentukan oleh kelas. 
+Jadi, mobil dengan warna merah dan merek Toyota adalah objek dari kelas "Mobil."
+
+3.Enkapsulasi (Encapsulation): Enkapsulasi adalah konsep menyembunyikan detail implementasi dari pengguna luar dan hanya menyediakan antarmuka yang dibutuhkan. Ini melibatkan pembatasan akses ke properti dan metode menggunakan modifier akses seperti private, protected, atau public. 
+Enkapsulasi menjaga agar data tidak diakses secara sembarangan.
+
+4.Pewarisan (Inheritance): Pewarisan adalah mekanisme di mana sebuah kelas dapat mewarisi properti dan metode dari kelas lain. Kelas anak akan memiliki semua atribut dan metode kelas induk. 
+Contoh, kelas "Mobil Balap" dapat mewarisi kelas "Mobil" dan menambahkan atribut atau metode baru yang khusus untuk mobil balap.
+
+5.Polimorfisme (Polymorphism): Polimorfisme memungkinkan objek dari kelas yang berbeda untuk diakses melalui antarmuka yang sama, atau memungkinkan metode yang sama untuk digunakan pada berbagai jenis objek. 
+Contoh polimorfisme adalah ketika metode berjalan() dapat diterapkan pada berbagai jenis hewan, namun hasilnya akan berbeda tergantung jenis hewannya (misalnya, ikan berenang, burung terbang).
+
+6.Abstraksi (Abstraction): Abstraksi adalah penyederhanaan kompleksitas dengan hanya menampilkan detail yang penting dan menyembunyikan detail lainnya. Dalam OOP, 
+abstraksi dilakukan dengan menggunakan kelas abstrak atau interface yang mendefinisikan apa yang seharusnya dilakukan oleh sebuah kelas, tanpa memperlihatkan bagaimana detail implementasinya
+
+"class & objek_python"
+   Class adalah prototipe yang ditentukan pengguna untuk objek yang mendefinisikan sekumpulan atribut yang mencirikan objek apa pun dari kelas tersebut.
+ Atribut adalah anggota data (variabel kelas dan variabel instance) dan metode, diakses melalui notasi titik.
+
+    Object mengacu pada instance dari kelas tertentu. Misalnya, objek bernama obj yang termasuk dalam kelas Circle adalah instance dari kelas tersebut. 
+Contoh unik dari struktur data yang ditentukan oleh kelasnya. Sebuah objek terdiri dari anggota data (variabel kelas dan variabel instance) dan metode.
+
+Kelas adalah blueprint atau cetak biru untuk membuat objek. Ini mendefinisikan atribut dan metode yang akan dimiliki oleh objek yang akan dibuat dari kelas tersebut.
+
+# Definisi kelas Mobil
+class Mobil:
+    # Konstruktor untuk mendefinisikan atribut
+    def __init__(self, merek, warna):
+        self.merek = merek
+        self.warna = warna
+
+    # Metode untuk menyalakan mesin mobil
+    def nyalakan_mesin(self):
+        print(f"Mesin {self.merek} berwarna {self.warna} menyala.")
+
+# Membuat objek dari kelas Mobil
+mobil_saya = Mobil("Toyota", "Merah")
+
+# Memanggil metode pada objek
+mobil_saya.nyalakan_mesin()
+
+# Definisi kelas Mobil
+class Mobil:
+    # Konstruktor untuk mendefinisikan atribut
+    def __init__(self, merek, warna):
+        self.merek = merek
+        self.warna = warna
+
+    # Metode untuk menyalakan mesin mobil
+    def nyalakan_mesin(self):
+        print(f"Mesin {self.merek} berwarna {self.warna} menyala.")
+
+# Membuat objek dari kelas Mobil
+mobil_saya = Mobil("Toyota", "Merah")
+
+# Memanggil metode pada objek
+mobil_saya.nyalakan_mesin()
+
+1.__init__: 
+Ini adalah konstruktor, yaitu metode yang dipanggil saat objek dari kelas dibuat. Di sini, kita mendefinisikan atribut merek dan warna yang akan dimiliki oleh setiap objek "Mobil".
+2.Atribut: 
+self.merek dan self.warna adalah atribut atau properti dari kelas "Mobil" yang menyimpan informasi tentang merek dan warna mobil.
+3.Metode nyalakan_mesin: 
+Metode ini adalah fungsi yang didefinisikan dalam kelas untuk menyalakan mesin mobil dan menampilkan pesan ke layar.
+4.Membuat Objek mobil_saya: 
+Ini adalah objek dari kelas "Mobil" dengan merek "Toyota" dan warna "Merah". Ketika kita memanggil mobil_saya.nyalakan_mesin(), maka akan dicetak "Mesin Toyota berwarna Merah menyala."
+
+Jadi, kelas adalah kerangka atau cetak biru, dan objek adalah instance nyata dari kelas tersebut.
+
+
+objek adalah instance dari kelas.Objek mewakili entitas nyata atau abstrak yang memiliki atribut (properti) dan perilaku (metode) yang didefinisikan oleh kelasnya
+
+# Definisi kelas Mobil
+class Mobil:
+    def __init__(self, merek, warna):
+        self.merek = merek
+        self.warna = warna
+
+    def nyalakan_mesin(self):
+        print(f"Mesin {self.merek} berwarna {self.warna} menyala.")
+
+# Membuat beberapa objek dari kelas Mobil
+mobil_1 = Mobil("Toyota", "Merah")
+mobil_2 = Mobil("Honda", "Biru")
+
+# Memanggil metode pada objek
+mobil_1.nyalakan_mesin()  # Output: Mesin Toyota berwarna Merah menyala.
+mobil_2.nyalakan_mesin()  # Output: Mesin Honda berwarna Biru menyala.
+
+Objek mobil_1: Ini adalah instance dari kelas "Mobil" dengan atribut merek yang diset ke "Toyota" dan warna ke "Merah". 
+Ketika mobil_1.nyalakan_mesin() dipanggil, objek ini menampilkan pesan: "Mesin Toyota berwarna Merah menyala."
+
+Objek mobil_2: Ini adalah instance lain dari kelas "Mobil" dengan atribut merek diset ke "Honda" dan warna ke "Biru".
+Saat mobil_2.nyalakan_mesin() dipanggil, objek ini menampilkan pesan: "Mesin Honda berwarna Biru menyala."
+
+
+"atribut_python"
+ atribut adalah variabel atau properti yang dimiliki oleh kelas atau objek dan menyimpan data atau informasi mengenai karakteristik objek tersebut. 
+ Atribut digunakan untuk menggambarkan keadaan atau sifat dari objek yang dibuat dari kelas.
+
+# Definisi kelas Mobil
+class Mobil:
+    # Konstruktor untuk mendefinisikan atribut
+    def __init__(self, merek, warna, tahun):
+        self.merek = merek   # Atribut merek
+        self.warna = warna   # Atribut warna
+        self.tahun = tahun   # Atribut tahun
+
+    # Metode untuk menampilkan informasi mobil
+    def tampilkan_info(self):
+        print(f"Mobil {self.merek} berwarna {self.warna} tahun {self.tahun}.")
+
+# Membuat objek dari kelas Mobil dengan atribut tertentu
+mobil_saya = Mobil("Toyota", "Merah", 2020)
+
+# Mengakses atribut
+print("Merek Mobil:", mobil_saya.merek)      # Output: Toyota
+print("Warna Mobil:", mobil_saya.warna)      # Output: Merah
+print("Tahun Mobil:", mobil_saya.tahun)      # Output: 2020
+
+# Memanggil metode untuk menampilkan informasi mobil
+mobil_saya.tampilkan_info()                  # Output: Mobil Toyota berwarna Merah tahun 2020.
+
+"metode_python"
+ metode adalah fungsi yang didefinisikan di dalam sebuah kelas dan digunakan untuk melakukan tindakan atau operasi tertentu pada objek dari kelas tersebut. 
+ Metode memungkinkan objek untuk memiliki perilaku yang spesifik, dan biasanya, metode berinteraksi dengan atribut-atribut dalam objek.
+
+# Definisi kelas Mobil
+class Mobil:
+    # Konstruktor untuk mendefinisikan atribut
+    def __init__(self, merek, warna):
+        self.merek = merek
+        self.warna = warna
+        self.mesin_nyala = False  # Status mesin, awalnya mati
+
+    # Metode untuk menyalakan mesin
+    def nyalakan_mesin(self):
+        if not self.mesin_nyala:
+            self.mesin_nyala = True
+            print(f"Mesin {self.merek} berwarna {self.warna} menyala.")
+        else:
+            print(f"Mesin {self.merek} sudah menyala.")
+
+    # Metode untuk mematikan mesin
+    def matikan_mesin(self):
+        if self.mesin_nyala:
+            self.mesin_nyala = False
+            print(f"Mesin {self.merek} berwarna {self.warna} mati.")
+        else:
+            print(f"Mesin {self.merek} sudah mati.")
+
+# Membuat objek dari kelas Mobil
+mobil_saya = Mobil("Toyota", "Merah")
+
+# Memanggil metode pada objek
+mobil_saya.nyalakan_mesin()  # Output: Mesin Toyota berwarna Merah menyala.
+mobil_saya.nyalakan_mesin()  # Output: Mesin Toyota sudah menyala.
+mobil_saya.matikan_mesin()   # Output: Mesin Toyota berwarna Merah mati.
+mobil_saya.matikan_mesin()   # Output: Mesin Toyota sudah mati.
+
+"construktor_python"
+constructor atau konstruktor adalah metode khusus yang secara otomatis dipanggil saat sebuah objek dibuat dari kelas. 
+Konstruktor digunakan untuk menginisialisasi atribut atau properti objek dengan nilai awal. Di Python, konstruktor didefinisikan 
+dengan nama __init__ dan menerima parameter self, yang mereferensikan objek yang sedang dibuat.
+
+# Definisi kelas Mobil
+class Mobil:
+    # Konstruktor
+    def __init__(self, merek, warna, tahun):
+        self.merek = merek    # Menginisialisasi atribut merek
+        self.warna = warna    # Menginisialisasi atribut warna
+        self.tahun = tahun    # Menginisialisasi atribut tahun
+
+    # Metode untuk menampilkan informasi mobil
+    def tampilkan_info(self):
+        print(f"Mobil {self.merek} berwarna {self.warna} tahun {self.tahun}.")
+
+# Membuat objek dari kelas Mobil
+mobil_saya = Mobil("Toyota", "Merah", 2020)
+
+# Mengakses metode tampilkan_info untuk menampilkan informasi mobil
+mobil_saya.tampilkan_info()  # Output: Mobil Toyota berwarna Merah tahun 2020.

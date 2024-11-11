@@ -1,0 +1,67 @@
+A. Konsep OOP (Object-Oriented Programming)
+    OOP adalah cara untuk membuat program dengan menggunakan objek. Objek adalah representasi 
+dari hal-hal nyata di dunia, seperti hewan, kendaraan, atau alat rumah tangga. Setiap objek 
+memiliki data (disebut atribut) dan tindakan (disebut metode).
+
+        Contoh Sederhana :
+Bayangkan kamu membuat program tentang kucing. Di sini, kucing adalah objek yang memiliki:
+            * Atribut: Seperti nama dan warna.
+            * Tindakan: Seperti mengeong.
+
+B. Class dan Objek
+    Class adalah cetak biru untuk membuat objek. Misalnya, kelas "Kucing" mendefinisikan 
+atribut (nama) dan tindakan (mengeong).
+    Objek adalah contoh nyata dari kelas. Contohnya, jika kelasnya "Kucing", objek bisa 
+berupa kucing bernama “Luna.”
+
+        Contoh Kode Sederhana :
+            class Kucing:
+                def __init__(self, nama, warna):
+                 self.nama = nama
+                 self.warna = warna
+
+             def mengeong(self):
+                 return f"{self.nama} mengeong!"
+
+            # Membuat objek dari kelas Kucing
+            kucing1 = Kucing("Luna", "Putih")
+            print(kucing1.mengeong())
+
+C. Atribut
+    Atribut adalah data yang dimiliki oleh objek. Setiap kucing bisa memiliki nama dan warna yang berbeda.
+
+Contoh :
+    * kucing1 memiliki nama "Luna" dan warna "Putih".
+    * Kamu bisa membuat objek kucing lain, misalnya kucing2 dengan nama "Tom" dan warna "Hitam".
+
+        Contoh Kode Sederhana :
+                 kucing2 = Kucing("Tom", "Hitam")
+            print(f"Kucing kedua adalah {kucing2.nama}, warnanya {kucing2.warna}")
+
+D. Metode
+    Metode adalah tindakan yang bisa dilakukan oleh objek. Dalam contoh kucing, tindakan ini bisa 
+berupa mengeong.
+
+        Contoh Kode Sederhana :
+                def mengeong(self):
+            return f"{self.nama} mengeong!"
+# Ketika kita memanggil kucing1.mengeong(), kucing Luna akan mengeong.
+
+E. Constructor
+    Constructor adalah fungsi khusus yang otomatis dijalankan saat objek dibuat. Di Python, ini disebut
+ __init__.
+
+        Contoh Kode Sederhana :
+            def __init__(self, nama, warna):
+                self.nama = nama
+                self.warna = warna
+#Constructor ini dijalankan saat kita membuat objek baru, seperti kucing1 = Kucing("Luna", "Putih"). 
+#Nama dan warna kucing akan langsung terisi.
+
+F. Kesimpulan
+    OOP memungkinkan kita untuk membuat program yang lebih terorganisir dan mudah dipahami dengan 
+menggunakan objek. Kita dapat mendefinisikan atribut dan metode untuk objek yang berbeda, serta 
+menggunakan konstruktor untuk menginisialisasi objek saat dibuat. Dengan cara ini, kita dapat lebih 
+mudah memodelkan dan menangani berbagai konsep dari dunia nyata dalam program kita.
+
+

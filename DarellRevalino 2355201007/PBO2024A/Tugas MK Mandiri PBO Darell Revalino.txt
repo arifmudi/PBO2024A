@@ -1,0 +1,89 @@
+Nama: Darell Revalino Muhardiansyah
+Prodi:S1 Teknik Informatika
+NIM:2355201007
+
+
+Pendahuluan
+
+	Python adalah bahasa pemrograman tingkat tinggi yang dirancang untuk kemudahan penggunaan dan keterbacaan. Dikenal sebagai bahasa multiguna, Python dapat digunakan dalam berbagai bidang, termasuk pengembangan web, analisis data, kecerdasan buatan, dan pengembangan game. Bahasa ini pertama kali dirilis pada tahun 1991 oleh Guido van Rossum dan terus berkembang hingga kini di bawah pengelolaan Python Software Foundation.
+
+Karakteristik Python
+Mudah Dipahami:
+ Sintaks Python yang sederhana dan bersih memudahkan pemula untuk belajar. Contoh kode seperti print("Hello, World!") menunjukkan betapa mudahnya mencetak output tanpa memerlukan tanda titik koma di akhir baris.
+
+Interpretatif:
+ Python adalah bahasa yang dijalankan melalui interpreter, sehingga programmer tidak perlu mengkompilasi kode sebelum menjalankannya. Ini memungkinkan pengembangan yang lebih cepat dan iterative.
+
+Portabilitas:
+ Python dapat dijalankan di berbagai platform, termasuk Windows, macOS, dan Linux, membuatnya sangat fleksibel untuk berbagai aplikasi.
+Keunggulan Python
+
+Komunitas Aktif:
+ Python memiliki komunitas pengguna yang besar dan aktif, menyediakan banyak sumber daya dan dukungan bagi para pengembang.
+
+Dukungan Library:
+ Terdapat banyak modul dan library yang tersedia untuk memperluas fungsionalitas Python, memudahkan pengembang dalam menyelesaikan tugas-tugas tertentu tanpa harus menulis semua kode dari awal.
+
+Penggunaan yang Luas:
+ Banyak perusahaan teknologi besar seperti Google, Facebook, dan Instagram menggunakan Python dalam produk mereka, membuktikan kehandalan dan popularitasnya di industry.
+
+Aplikasi dalam Pembelajaran
+
+Python sering dipilih sebagai bahasa pemrograman untuk pendidikan karena:
+
+Keterbacaan Kode:
+ Desain sintaksnya yang mirip dengan bahasa manusia membuatnya lebih mudah dipahami oleh siswa baru.
+
+Fleksibilitas:
+ Cocok untuk berbagai jenis proyek mulai dari skrip sederhana hingga aplikasi kompleks.
+
+Dalam konteks pendidikan, penggunaan Python dapat meningkatkan minat siswa dalam pemrograman dan membantu mereka memahami konsep-konsep dasar dengan lebih baik6. Sebagai contoh, banyak kurikulum di sekolah teknik informatika mulai mengintegrasikan Python sebagai bagian dari modul pembelajaran mereka. Dengan semua keunggulan ini, Python menjadi pilihan utama bagi banyak pendidik dan pelajar yang ingin memasuki dunia pemrograman.
+
+
+Variabel
+
+	Variabel dalam bahasa pemrograman Python adalah entitas yang digunakan untuk menyimpan nilai data yang dapat diakses dan dimanipulasi sepanjang program. Variabel berfungsi sebagai wadah untuk menyimpan informasi dan memungkinkan pengembang untuk memberikan nama pada data tersebut, sehingga lebih mudah untuk mengelola dan menggunakan data dalam kode.
+Pembuatan dan Inisialisasi Variabel
+Di Python, variabel tidak memerlukan deklarasi eksplisit sebelum digunakan. Variabel dibuat saat pertama kali nilai diberikan padanya. Proses ini melibatkan dua langkah: deklarasi dan inisialisasi.
+Deklarasi: Memberikan nama pada variabel. Nama variabel harus mengikuti aturan tertentu, seperti dimulai dengan huruf atau garis bawah, dan hanya boleh mengandung karakter alfanumerik serta garis bawah.
+Inisialisasi: Memberikan nilai awal pada variabel. Nilai ini bisa berupa berbagai tipe data, termasuk integer, float, string, boolean, dan struktur data yang lebih kompleks seperti list dan dictionary.
+
+Tipe data pada variable python:
+
+Integer: Tipe data untuk bilangan bulat, baik positif maupun negatif.
+Contoh:	10, -5, 0
+
+Float: Tipe data untuk bilangan desimal (pecahan).
+Contoh: 3.14, -0.001
+
+String: Tipe data untuk teks, diapit oleh tanda kutip tunggal atau ganda.
+Contoh:	"Hello", 'Python'
+
+Boolean: Tipe data yang hanya memiliki dua nilai: benar (True) dan salah (False).
+Contoh: True, False	
+
+Complex: Tipe data untuk bilangan kompleks yang terdiri dari bagian real dan imajiner.
+Contoh: 1 + 2j
+
+
+Komentar
+
+	Komentar dalam bahasa pemrograman Python adalah bagian dari kode yang tidak dieksekusi oleh interpreter. Komentar digunakan untuk memberikan penjelasan, catatan, atau keterangan tambahan mengenai kode yang ditulis, sehingga memudahkan pemahaman bagi programmer lain maupun diri sendiri di masa depan.
+Jenis-Jenis Komentar di Python
+1. Komentar Satu Baris
+Komentar satu baris dimulai dengan tanda pagar (#). Semua teks setelah tanda ini pada baris yang sama akan diabaikan oleh interpreter.
+
+2. Komentar Multi-Baris
+Python tidak memiliki sintaks khusus untuk komentar multi-baris. Namun, ada dua cara untuk menulis komentar multi-baris:
+Menggunakan Tanda Pagar untuk Setiap Baris: Setiap baris komentar harus diawali dengan tanda pagar.
+Menggunakan String Literal: Anda dapat menggunakan triple quotes (""" atau ''') untuk membuat string yang tidak ditugaskan ke variabel. Meskipun ini bukan komentar resmi, Python akan mengabaikan string ini jika tidak digunakan.
+
+Fungsi Komentar
+
+Komentar memiliki beberapa fungsi penting:
+
+Meningkatkan Keterbacaan: Dengan menambahkan komentar, programmer lain (atau diri sendiri di masa depan) dapat lebih mudah memahami maksud dan fungsi dari kode yang ditulis.
+
+Menonaktifkan Kode: Komentar juga dapat digunakan untuk menonaktifkan bagian tertentu dari kode saat melakukan pengujian atau debugging tanpa menghapusnya secara permanen.
+
+Dokumentasi: Komentar sering digunakan untuk mendokumentasikan fungsi, kelas, dan modul dalam kode, memberikan informasi tentang cara penggunaan dan tujuan mereka
