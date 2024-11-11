@@ -1,5 +1,0 @@
-NULL
-###########
-Min: 4 karakter
-Max: 4 karakter
-Range: 0 karakter
