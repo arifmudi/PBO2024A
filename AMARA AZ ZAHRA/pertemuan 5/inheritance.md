@@ -30,27 +30,27 @@
 
 **3. Jenis-jenis Pewarisan**   
     
-|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
+
 | Jenis Inheritance |                  Deskripsi                        |        Contoh Implementasi        |                 Kapan Digunakan                 |
 |-------------------|---------------------------------------------------|-----------------------------------|-------------------------------------------------|
 | *Single*          | Mewarisi dari satu kelas induk                    | class Dog(Animal)                 | Saat hanya butuh dari satu kelas induk          |
-|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
+
 | Jenis Inheritance |                  Deskripsi                        |        Contoh Implementasi        |                 Kapan Digunakan                 |
 |-------------------|---------------------------------------------------|-----------------------------------|-------------------------------------------------|
 | *Multiple*        | Mewarisi dari lebih dari satu kelas induk         | class Hybrid(Dog, Cat)            | Saat butuh fitur dari beberapa kelas induk      |
-|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
+
 | Jenis Inheritance |                  Deskripsi                        |        Contoh Implementasi        |                 Kapan Digunakan                 |
 |-------------------|---------------------------------------------------|-----------------------------------|-------------------------------------------------|
 | *Multilevel*      | Mewarisi secara berurutan dari beberapa kelas     | class Puppy(Dog)                  | Untuk pewarisan bertingkat                      |
-|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
+
 | Jenis Inheritance |                  Deskripsi                        |        Contoh Implementasi        |                 Kapan Digunakan                 |
 |-------------------|---------------------------------------------------|-----------------------------------|-------------------------------------------------|
 | *Hierarchical*    | Beberapa subkelas mewarisi dari satu kelas induk  | class Dog(Animal), Cat(Animal)    | Saat beberapa kelas berbagi satu induk          |
-|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
+
 | Jenis Inheritance |                  Deskripsi                        |        Contoh Implementasi        |                 Kapan Digunakan                 |
 |-------------------|---------------------------------------------------|-----------------------------------|-------------------------------------------------|
 | *Hybrid*          | Kombinasi dari beberapa jenis pewarisan           | class HybridDog(Dog, Robot)       | Ketika butuh gabungan tipe pewarisan            |
-|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
+
     
     *A.Python - Single Inheritance*
         Bentuk pewarisan paling sederhana di mana kelas anak mewarisi atribut dan metode hanya dari satu kelas induk.
