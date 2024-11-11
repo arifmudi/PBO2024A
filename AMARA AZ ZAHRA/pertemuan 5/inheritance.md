@@ -36,7 +36,7 @@
     | *Single*          | Mewarisi dari satu kelas induk                    | `class Dog(Animal)`               | Saat hanya butuh dari satu kelas induk          |
     |-------------------|---------------------------------------------------|-----------------------------------|-------------------------------------------------|
     | *Multiple*        | Mewarisi dari lebih dari satu kelas induk         | `class Hybrid(Dog, Cat)`          | Saat butuh fitur dari beberapa kelas induk      |
-    |-------------------|---------------------------------------------------------------------------------------|-------------------------------------------------|
+    |-------------------|---------------------------------------------------|-----------------------------------|-------------------------------------------------|
     | *Multilevel*      | Mewarisi secara berurutan dari beberapa kelas     | `class Puppy(Dog)`                | Untuk pewarisan bertingkat                      |
     |-------------------|---------------------------------------------------|-----------------------------------|-------------------------------------------------|
     | *Hierarchical*    | Beberapa subkelas mewarisi dari satu kelas induk  | `class Dog(Animal), Cat(Animal)`  | Saat beberapa kelas berbagi satu induk          |
