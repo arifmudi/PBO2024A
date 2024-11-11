@@ -45,38 +45,36 @@ Gunakan super() ketika Anda ingin memperluas fungsi dari konstruktor atau metode
 
 3.Jenis Jenis Inheritance:
 
-|-------------------------------------------------------------------------------------------------------------|
 | Jenis Inheritance           | Single Inheritance                                                            |
 |-----------------------------|-------------------------------------------------------------------------------|
 | **Pengertian**              | Mewarisi dari satu kelas induk.                                               |
 | **Contoh Implementasi**     | `class B(A): pass`                                                            |
 | **Kapan Menggunakan**       | Ketika kelas turunan hanya perlu satu dasar dari kelas induk.                 |
-|-------------------------------------------------------------------------------------------------------------|
+
 | Jenis Inheritance           | Multiple Inheritance                                                          |
 |-----------------------------|-------------------------------------------------------------------------------|
 | **Pengertian**              | Mewarisi dari lebih dari satu kelas induk.                                    |
 | **Contoh Implementasi**     | `class C(A, B): pass`                                                         |
 | **Kapan Menggunakan**       | Ketika kelas turunan membutuhkan sifat dari beberapa kelas induk.             |
-|-------------------------------------------------------------------------------------------------------------|
+
 | Jenis Inheritance           | Multilevel Inheritance                                                        |
 |-----------------------------|-------------------------------------------------------------------------------|
 | **Pengertian**              | Mewarisi dalam beberapa level (kelas induk, anak, cucu).                      |
 | **Contoh Implementasi**     | `class C(B): pass` dan `class B(A): pass`                                     |
 | **Kapan Menggunakan**       | Ketika ingin membuat hierarki yang panjang atau rantai turunan.               |
-|-------------------------------------------------------------------------------------------------------------|
+
 | Jenis Inheritance           | Hierarchical Inheritance                                                      |
 |-----------------------------|-------------------------------------------------------------------------------|
 | **Pengertian**              | Satu kelas induk diwarisi oleh beberapa kelas turunan.                        |
 | **Contoh Implementasi**     | `class B(A): pass` dan `class C(A): pass`                                     |
 | **Kapan Menggunakan**       | Ketika beberapa kelas perlu memiliki sifat yang sama dari satu kelas induk.   |
-|-------------------------------------------------------------------------------------------------------------|
+
 | Jenis Inheritance           | Hybrid Inheritance                                                            |
 |-----------------------------|-------------------------------------------------------------------------------|
 | **Pengertian**              | Gabungan dari beberapa tipe inheritance, termasuk multiple dan multilevel.    |
 | **Contoh Implementasi**     | `class C(A, B): pass` (A dan B bisa saling terkait)                           |
 | **Kapan Menggunakan**       | Ketika membutuhkan kombinasi sifat dari beberapa inheritance untuk kasus      |
 |                             | yang  kompleks.                                                               |
-|-------------------------------------------------------------------------------------------------------------|
 
 4.Override Method (Penulisan Ulang)
 **Pengertian:**
