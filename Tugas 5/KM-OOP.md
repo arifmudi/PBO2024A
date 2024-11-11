@@ -186,3 +186,7 @@ print(car.start_car())  # Output: Engine starting
 ```
 
 Dalam praktik nyata, pilihan antara pewarisan dan komposisi harus didasarkan pada kebutuhan spesifik project dan prinsip design yang ingin diterapkan. Ingat prinsip "Composition over Inheritance" yang sering dianjurkan dalam pemrograman berorientasi objek modern.
+
+
+### Link Youtube KT
+(https://youtu.be/KUqJ9WMk8VU?feature=shared)
