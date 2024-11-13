@@ -1,3 +1,0 @@
-Q1 : random.random() ternyata menghasilkan angka acak
-Q2 : mungkin di elif
-Q3 : sekitar 15 menit karena di semester 1 sudah belajar dasar pyhton
