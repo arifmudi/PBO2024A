@@ -1,1 +1,0 @@
-[Kelompok](https://youtu.be/7uORmY54E7o?feature=shared)
