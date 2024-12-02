@@ -1,4 +1,4 @@
-Kisah Inspiratif: Kerajinan Anyaman Bambu:
+ Kisah Inspiratif: Kerajinan Anyaman Bambu:
 
 Di sebuah desa terpencil, hidup seorang pengrajin bernama Adi. Sejak kecil, Adi sudah tertarik dengan kerajinan tangan, khususnya anyaman bambu. Desa tempat tinggalnya memang terkenal dengan kerajinan bambu yang indah dan berkualitas tinggi.
 Setelah menyelesaikan sekolahnya, Adi memutuskan untuk fokus mengembangkan keahliannya dalam membuat aneka produk anyaman bambu. Ia mulai dengan membuat tikar, keranjang, dan vas bunga sederhana. Dengan ketekunan dan kesabaran, Adi terus berlatih dan mengeksplorasi berbagai bentuk dan motif anyaman.
@@ -9,6 +9,7 @@ Sejak saat itu, usaha Adi terus berkembang pesat. Ia tidak hanya menjual produkn
 Kisah Adi menjadi inspirasi bagi banyak orang, terutama mereka yang ingin memulai usaha kreatif berbasis kearifan lokal. Ketekunan, kreativitas, dan keberanian Adi dalam menghadapi tantangan telah membawanya pada kesuksesan yang luar biasa.
 
 class PengrajinBambu:
+
     def __init__(self, nama, jenis_bambu, teknik_anyam):
         self.nama = nama
         self.jenis_bambu = jenis_bambu

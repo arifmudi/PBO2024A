@@ -40,3 +40,4 @@ decoder = KonohaDecoder(input_code)
 # Menampilkan hasil dekripsi
 output = decoder.decrypt()
 print(output)
+ 
