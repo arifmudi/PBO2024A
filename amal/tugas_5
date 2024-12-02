@@ -1,0 +1,138 @@
+Konsep Pewarisan Tunggal (Single Inheritance) dan Penggunaan super dalam Pemrograman Berorientasi Objek
+
+Pewarisan adalah salah satu fitur penting dalam Pemrograman Berorientasi Objek (OOP). Konsep pewarisan memungkinkan suatu kelas untuk mewarisi properti dan metode dari kelas lain. Pada umumnya, ada dua jenis pewarisan: pewarisan tunggal dan pewarisan ganda. Dalam pembahasan ini, kita akan fokus pada pewarisan tunggal dan bagaimana super digunakan dalam konteks ini.
+
+ 1. Konsep Pewarisan Tunggal (Single Inheritance)
+
+Pewarisan tunggal terjadi ketika satu kelas (subkelas) mewarisi properti dan metode dari satu kelas lainnya (superkelas). Hal ini memungkinkan subkelas untuk menggunakan metode dan properti dari superkelas, dan juga dapat menambahkan atau mengubah fungsionalitas tertentu.
+
+Contoh:
+
+- Kelas Mobil adalah kelas induk yang memiliki metode dan atribut umum terkait mobil.
+- Kelas MobilSedan adalah kelas anak yang mewarisi dari kelas Mobil, tetapi bisa memiliki fitur tambahan atau mengubah perilaku tertentu.
+
+ Keuntungan Pewarisan Tunggal
+- Reusability (Penggunaan Kembali Kode): Subkelas dapat menggunakan kode yang ada di superkelas tanpa harus menulis ulang.
+- Organisasi yang Terstruktur: Pewarisan memudahkan pengelolaan kelas dengan memisahkan kode yang umum dan spesifik.
+
+ 2. Penggunaan super untuk Mewarisi Konstruktor**
+
+Kata kunci super digunakan dalam subclass untuk mengakses konstruktor atau metode dari superkelas. Hal ini sangat berguna untuk mewarisi atau memodifikasi perilaku konstruktor dari kelas induk.
+
+ Fungsi super() dalam Konstruktor
+- super() digunakan untuk memanggil konstruktor dari superkelas untuk menginisialisasi properti yang diwarisi dari kelas induk.
+- Jika superkelas memiliki konstruktor dengan parameter, kita dapat menggunakan super() untuk meneruskannya ke konstruktor superkelas.
+
+ Contoh Penggunaan super() untuk Mewarisi Konstruktor:
+
+python
+class Kendaraan:
+    def __init__(self, merk, tahun):
+        self.merk = merk
+        self.tahun = tahun
+
+class Mobil(Kendaraan):
+    def __init__(self, merk, tahun, tipe):
+         Memanggil konstruktor superkelas Kendaraan
+        super().__init__(merk, tahun)
+        self.tipe = tipe
+
+    def tampilkan_info(self):
+        print(f"Merk: {self.merk}, Tahun: {self.tahun}, Tipe: {self.tipe}")
+
+ Menggunakan kelas Mobil
+mobil1 = Mobil("Toyota", 2020, "SUV")
+mobil1.tampilkan_info()
+
+
+Output:
+
+Merk: Toyota, Tahun: 2020, Tipe: SUV
+
+
+ Kapan dan Mengapa Menggunakan super()
+
+- Kapan: Anda harus menggunakan super() ketika Anda ingin memanggil konstruktor atau metode dari kelas induk dalam subkelas.
+- Mengapa: Dengan menggunakan super(), Anda dapat memastikan bahwa semua inisialisasi atau logika yang ada di konstruktor kelas induk tetap dijalankan, sehingga objek dari subkelas memiliki semua atribut yang diperlukan.
+
+ 3. Override Method dan Manfaatnya
+
+Overriding (penimpaan metode) adalah proses di mana subkelas memberikan implementasi yang baru untuk metode yang sudah ada di superkelas. Hal ini memungkinkan subkelas untuk mengubah perilaku metode yang diwarisi agar lebih sesuai dengan kebutuhan spesifiknya.
+
+ Manfaat Overriding
+- Kustomisasi Perilaku: Subkelas dapat mengubah perilaku metode yang diwarisi dari superkelas agar sesuai dengan kebutuhan aplikasi.
+- Polimorfisme: Dengan overriding, Anda dapat memanfaatkan polimorfisme, di mana objek dari subkelas dapat diperlakukan sebagai objek dari superkelas, tetapi tetap menjalankan implementasi metode yang berbeda.
+
+ Contoh Override Method:
+
+python
+class Hewan:
+    def suara(self):
+        print("Hewan bersuara")
+
+class Anjing(Hewan):
+    def suara(self):
+        print("Anjing menggonggong")
+
+class Kucing(Hewan):
+    def suara(self):
+        print("Kucing mengeong")
+
+ Menggunakan kelas yang sudah dioverride
+hewan1 = Anjing()
+hewan2 = Kucing()
+
+hewan1.suara()   Output: Anjing menggonggong
+hewan2.suara()   Output: Kucing mengeong
+
+
+ Kapan dan Mengapa Menggunakan Overriding
+
+- Kapan: Gunakan overriding saat Anda ingin mengubah atau menyesuaikan perilaku metode yang diwarisi dari superkelas.
+- Mengapa: Dengan overriding, Anda dapat menyesuaikan metode sesuai dengan kebutuhan spesifik subkelas, dan memperkaya fungsionalitas objek.
+
+4. Pewarisan vs. Non-Pewarisan: Kapan Menggunakan Mana?
+
+ Kapan Menggunakan Pewarisan
+Pewarisan cocok digunakan ketika Anda memiliki hubungan "is-a" antara dua kelas. Artinya, kelas anak adalah jenis dari kelas induk, dan Anda ingin menggunakan kembali kode yang ada di kelas induk untuk meningkatkan efisiensi.
+
+ Contoh:
+- Mobil adalah jenis dari Kendaraan, sehingga kelas Mobil mewarisi dari kelas Kendaraan.
+- Anjing adalah jenis dari Hewan, sehingga kelas Anjing mewarisi kelas Hewan.
+
+ Kapan Menggunakan Non-Pewarisan (Komposisi)
+Komposisi lebih cocok ketika Anda memiliki hubungan "has-a" atau "part-of", yang berarti suatu objek terdiri dari objek lainnya, tetapi kedua kelas tersebut tidak memiliki hubungan "is-a".
+
+ Contoh:
+- Sebuah Mobil memiliki Mesin, tetapi mobil bukanlah mesin. Oleh karena itu, hubungan ini lebih cocok diwakili dengan komposisi, bukan pewarisan.
+- Karyawan memiliki Alamat atau Telepon, tetapi tidak ada hubungan "is-a".
+
+ Contoh Implementasi Komposisi:
+
+python
+class Mesin:
+    def __init__(self, tipe):
+        self.tipe = tipe
+
+class Mobil:
+    def __init__(self, merk, mesin):
+        self.merk = merk
+        self.mesin = mesin   Komposisi: Mobil memiliki Mesin
+
+    def tampilkan_info(self):
+        print(f"Mobil {self.merk} memiliki mesin tipe {self.mesin.tipe}")
+
+ Membuat objek Mesin
+mesin1 = Mesin("V6")
+mobil1 = Mobil("Toyota", mesin1)
+mobil1.tampilkan_info()
+
+
+Output:
+
+Mobil Toyota memiliki mesin tipe V6
+
+
+ Kesimpulan
+- Gunakan pewarisan (inheritance) ketika ada hubungan "is-a" antara dua kelas, dan Anda ingin menggunakan kembali kode dari superkelas.
+- Gunakan komposisi ketika ada hubungan "has-a" atau "part-of, di mana objek satu terdiri dari objek lainnya, tetapi tidak dalam hubungan pewarisan.
