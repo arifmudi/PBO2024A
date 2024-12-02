@@ -1,8 +1,9 @@
-## Pengertian Polimorfisme
-Polimorfisme adalah salah satu konsep dalam pemrograman berorientasi objek dimana suatu objek dapat memiliki banyak bentuk. Dalam konteks OOP, polimorfisme memungkinkan kita untuk melakukan suatu aksi dengan cara yang berbeda.
+## Polimorfisme
+Polimorfisme adalah salah satu konsep dalam pemrograman berorientasi objek dimana suatu objek dapat memiliki banyak bentuk
 
 ## Jenis-Jenis Polimorfisme
 1. **Overriding**: Menulis ulang method yang sudah ada di class parent di class child dengan implementasi yang berbeda
+   
 2. **Overloading**: Membuat method dengan nama yang sama tapi parameter berbeda dalam satu class
 
 ## Implementasi Polimorfisme
