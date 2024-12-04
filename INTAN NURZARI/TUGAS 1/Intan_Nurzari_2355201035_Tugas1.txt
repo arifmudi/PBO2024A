@@ -1,0 +1,41 @@
+Q1. Apa itu variabel?
+jwb : Variabel merupakan tempat menyimpai nilai/data
+
+Q2. Syarat dan ketentuan Penulisan variabel
+jwb : Penggunan huruf kapital pada variabel sangat berpengaruh, contoh
+     variabel dengan nama Vab,vab,VAB adalah 3 variabel yang berbeda 
+
+Q3. Case senstive pada python
+jwb : Setiap penulisan variabel dalam python dipengaruhi oleh huruf kecil dan besar 
+     contoh : KurokoTetsuya
+              kurokoTetsuya
+              kurokotetsuya
+     3 variabel diats menurupakan 3 variabel yang berbeda, vab pertama setiap awal kata diawali huruf besar, 
+     vab kedua, setiap awal kata diawali huruf besar kecuali kata pertama, vab ke 3 semua hurufnya menggunakan huruf kecil
+
+Q4. Macam macam penulisan variabel / macam macam case 
+    pascal case: aomineNamiya
+    camel case : AomineNamiya
+    snake case : aomine_namiya
+
+Q5. Jenis jenis tipe data 
+    Tipe data numerik : 
+    1. integer (int)
+       ex : A = 3 -> tipe data angka bilangan asli
+    2. Float (float) 
+       ex : B = 3.5 -> tipe data angka bilangan bulat berkoma 
+
+    Tipe data text : 
+    1. string (str)
+       ex : C = "aku" -> tipe data yang berbentuk teks
+     
+     Tipe data list 
+     1. list (list)
+        ex : D = ["tanah",3,"air"] -> tipe data utuk membuat list 
+     2. tuple (tuple)
+        ex : E = ("kaca","beling","roda") -> tipe data mirip list tapi menggunakan kurung biasa
+     3. range (range)
+        ex : F = range (5) -> untuk menentukan jumlah data, berguna untuk for 
+
+     Tipe data boolean (bool)
+        ex : G = true -> tipe data untuk menentukan true / false

@@ -1,0 +1,7 @@
+Halo, inii baris pertama.
+Ini adalah baris kedua.
+Baris ketiga ada didisi.
+###########
+Min: 23 karakter
+Max: 25 karakter
+Range: 2 karakter

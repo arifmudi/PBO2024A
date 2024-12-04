@@ -1,0 +1,8 @@
+contoh teks baris satu.
+Baris kedua memiliki lebih banyak karakter 
+dibandingkan baris pertama.
+pendek.
+###########
+Min: 7 karakter
+Max: 43 karakter
+Range: 36 karakter
