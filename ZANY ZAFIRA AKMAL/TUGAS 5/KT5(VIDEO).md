@@ -1,0 +1,10 @@
+kelompok:
+
+1. AMARA AZ ZAHRA(2355201023)
+2. ERMITA SARI(2355201024)
+3. ZANY ZAFIRA AKMAL(2355201019)
+
+PEMROGRAMAN BERORIENTASI OBJEK
+
+tentang video penjelasan BASIC PYTHON.
+link video nya : https://youtu.be/7a1JMBQJOcQ?si=stE2mkM0AmBRMOUp

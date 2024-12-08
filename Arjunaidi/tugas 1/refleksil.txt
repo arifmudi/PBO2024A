@@ -1,0 +1,8 @@
+Q1 : Apa hal baru yang kamu pelajari melalui lab ini?
+    = Saya mempelajari tentang contoh sederhana dari penggunaan variabel dan fungsi print untuk output teks dalam Python.
+
+Q2 : Hal apa yang masih kamu sulit pahami?
+    = Ada beberapa hal yang masih sulit dipahami mengenai lovemeter yaitu tentang if, elif, else.
+
+Q3 : Berapa alokasi waktu kamu untuk mempelajari materi + lab mingggu ini?
+    = saya mempelajari materi hari ini dalam waktu sekitar 30 menit.

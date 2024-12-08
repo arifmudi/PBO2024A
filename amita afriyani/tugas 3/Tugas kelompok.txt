@@ -1,0 +1,9 @@
+kelompok:
+1. Noviyanti (2355201014)
+2. Amita Afriyani (22355201004)
+3. M.abdi AHZANI (2355201036)
+4. Aditia pratama (2355201001)
+
+PEMROGRAMAN BERORIENTASI OBJEK
+Tentang video penjelasan Basic Python
+https://youtu.be/vYdcikCLcOw?si=blr-u3T6haTWrioy
