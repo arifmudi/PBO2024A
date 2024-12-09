@@ -1,138 +1,72 @@
 Nama : Khairun Fadli Nim : 2355201043 Matkul : PBO
 
--------------------------------------------------------- Polimorfisme -------------------------------------------------------------------------------
-# Polimorfisme dalam Pemrograman
+------------------------------------------------------Polimorfisme--------------------------------------------------
 
-## Pengertian Dasar
-Polimorfisme berasal dari bahasa Yunani yang berarti "banyak bentuk".
-Dalam konteks pemrograman, polimorfisme adalah kemampuan suatu objek untuk memiliki banyak bentuk atau perilaku yang berbeda berdasarkan konteks atau parameter yang diberikan.
+**Pengertian Polimorfisme**  
 
-## Jenis-Jenis Polimorfisme
+Polimorfisme adalah salah satu konsep fundamental dalam pemrograman berorientasi objek (Object-Oriented Programming, OOP) yang memungkinkan suatu objek atau fungsi untuk memiliki banyak bentuk (bentuk yang berbeda-beda) tergantung pada bagaimana ia digunakan. Kata *polimorfisme* sendiri berasal dari bahasa Yunani, yaitu "poly" yang berarti banyak, dan "morph" yang berarti bentuk.  
 
-### 1. Polimorfisme Compile-Time (Statis)
-Polimorfisme jenis ini terjadi pada saat kompilasi dan biasa disebut method overloading. Contoh dalam Java:
+ **Jenis-jenis Polimorfisme**  
+Polimorfisme dapat dibagi menjadi dua jenis utama:  
 
-```java
-class Calculator {
-    // Metode pertama untuk integer
-    public int tambah(int a, int b) {
-        return a + b;
-    }
+1. **Polimorfisme pada waktu kompilasi (Compile-time Polymorphism)**  
+   Polimorfisme jenis ini dikenal juga sebagai *method overloading* atau *operator overloading*. Polimorfisme ini terjadi ketika sebuah fungsi atau metode memiliki nama yang sama, tetapi parameter atau argumennya berbeda. Contohnya:  
+   ```java
+   class Calculator {
+       // Overloading method add
+       int add(int a, int b) {
+           return a + b;
+       }
 
-    // Metode kedua untuk double
-    public double tambah(double a, double b) {
-        return a + b;
-    }
-}
-```
+       double add(double a, double b) {
+           return a + b;
+       }
+   }
+   ```  
+   Di sini, metode `add` bisa menangani argumen dengan tipe data berbeda, tetapi nama metode tetap sama.
 
-### 2. Polimorfisme Run-Time (Dinamis)
-Polimorfisme ini terjadi melalui pewarisan dan method overriding. Contoh dalam Python:
+2. **Polimorfisme pada waktu runtime (Runtime Polymorphism)**  
+   Polimorfisme ini dikenal juga sebagai *method overriding*. Ini memungkinkan subclass untuk menyediakan implementasi yang berbeda dari metode yang didefinisikan di superclass. Contohnya:  
+   ```java
+   class Animal {
+       void sound() {
+           System.out.println("Animal makes a sound");
+       }
+   }
 
-```python
-class Hewan:
-    def bersuara(self):
-        print("Suara hewan")
+   class Dog extends Animal {
+       @Override
+       void sound() {
+           System.out.println("Dog barks");
+       }
+   }
 
-class Kucing(Hewan):
-    def bersuara(self):
-        print("Meong!")
+   class Cat extends Animal {
+       @Override
+       void sound() {
+           System.out.println("Cat meows");
+       }
+   }
+   public class Main {
+       public static void main(String[] args) {
+           Animal animal;
 
-class Anjing(Hewan):
-    def bersuara(self):
-        print("Guk guk!")
+           animal = new Dog();
+           animal.sound(); // Output: Dog barks
 
-# Penggunaan polimorfisme
-def tampilkan_suara(hewan):
-    hewan.bersuara()
+           animal = new Cat();
+           animal.sound(); // Output: Cat meows
+       }
+   }
+   ```  
+   Pada contoh di atas, metode `sound()` dipanggil berdasarkan tipe objek pada runtime, meskipun referensinya adalah tipe `Animal`.
 
-# Objek berbeda dengan metode yang sama
-kucing = Kucing()
-anjing = Anjing()
+**Manfaat Polimorfisme**
+1. **Fleksibilitas**: Memungkinkan kode yang lebih fleksibel karena objek dapat digunakan dalam berbagai bentuk.
+2. **Pemeliharaan Kode**: Dengan polimorfisme, kode dapat diperbarui atau ditingkatkan tanpa memengaruhi komponen lain secara signifikan.
+3. **Reduksi Duplikasi Kode**: Menghindari penulisan kode yang berulang dengan cara mengatur fungsi atau metode yang generik.
 
-tampilkan_suara(kucing)   # Output: Meong!
-tampilkan_suara(anjing)   # Output: Guk guk!
-```
+### **Implementasi Polimorfisme**
+Polimorfisme banyak digunakan dalam pemrograman OOP untuk mendukung prinsip *reusability* dan *extensibility*. Contohnya, dalam desain aplikasi, polimorfisme sering digunakan untuk membuat antarmuka (*interfaces*) atau kelas abstrak yang dapat diimplementasikan oleh berbagai kelas konkret.
 
-## Keuntungan Polimorfisme
-
-1. **Fleksibilitas**: Memungkinkan kode yang lebih fleksibel dan dapat digunakan ulang.
-2. **Abstraksi**: Membantu dalam membuat desain yang lebih abstrak dan modular.
-3. **Kemudahan Pengembangan**: Memudahkan penambahan fungsionalitas baru tanpa mengubah kode yang sudah ada.
-
-## Contoh Praktis dalam Bahasa Java
-
-```java
-public class PolimorfismeContoh {
-    public static void main(String[] args) {
-        Bentuk[] bentukArray = new Bentuk[3];
-        bentukArray[0] = new Lingkaran(5);
-        bentukArray[1] = new Persegi(4);
-        bentukArray[2] = new Segitiga(3, 4);
-
-        // Menghitung luas setiap bentuk
-        for (Bentuk bentuk : bentukArray) {
-            System.out.println("Luas: " + bentuk.hitungLuas());
-        }
-    }
-}
-
-abstract class Bentuk {
-    abstract double hitungLuas();
-}
-
-class Lingkaran extends Bentuk {
-    private double jari;
-
-    public Lingkaran(double jari) {
-        this.jari = jari;
-    }
-
-    @Override
-    double hitungLuas() {
-        return Math.PI * jari * jari;
-    }
-}
-
-class Persegi extends Bentuk {
-    private double sisi;
-
-    public Persegi(double sisi) {
-        this.sisi = sisi;
-    }
-
-    @Override
-    double hitungLuas() {
-        return sisi * sisi;
-    }
-}
-
-class Segitiga extends Bentuk {
-    private double alas;
-    private double tinggi;
-
-    public Segitiga(double alas, double tinggi) {
-        this.alas = alas;
-        this.tinggi = tinggi;
-    }
-
-    @Override
-    double hitungLuas() {
-        return 0.5 * alas * tinggi;
-    }
-}
-```
-
-## Praktek Terbaik
-
-1. Gunakan polimorfisme untuk membuat kode yang lebih generic dan fleksibel.
-2. Pahami perbedaan antara polimorfisme compile-time dan run-time.
-3. Gunakan abstraksi dan antarmuka untuk mencapai polimorfisme yang lebih baik.
-
-## Kesalahan Umum yang Perlu Dihindari
-
-1. Overusing polimorfisme yang dapat membuat kode menjadi kompleks.
-2. Tidak memahami perbedaan antara inheritance dan composition.
-3. Membuat hierarki kelas yang terlalu dalam.
-
-Polimorfisme adalah konsep fundamental dalam pemrograman berorientasi objek yang memungkinkan fleksibilitas dan ekstensibilitas dalam desain perangkat lunak. Dengan memahami dan menerapkan konsep ini dengan baik, Anda dapat membuat kode yang lebih bersih, modular, dan mudah dipelihara.
+Dengan memahami dan menerapkan polimorfisme, pengembang perangkat lunak dapat membuat sistem yang lebih terorganisasi, mudah dikembangkan, dan mudah dipelihara.
