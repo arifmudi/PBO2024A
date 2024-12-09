@@ -1,72 +1,65 @@
-Nama : Khairun Fadli Nim : 2355201043 Matkul : PBO
+Nama : M.Abdi Ahzani Nim : 2355201036 Matkul : PBO
 
-------------------------------------------------------Polimorfisme--------------------------------------------------
+                              POLIMORFISME
 
-**Pengertian Polimorfisme**  
+Polimorfisme adalah salah satu konsep utama dalam Pemrograman Berorientasi Objek (Object-Oriented Programming / OOP). Kata polimorfisme berasal dari bahasa Yunani: poly berarti "banyak", dan morphe berarti "bentuk". Dalam konteks OOP, polimorfisme memungkinkan satu antarmuka, metode, atau kelas memiliki berbagai bentuk atau perilaku yang berbeda.
 
-Polimorfisme adalah salah satu konsep fundamental dalam pemrograman berorientasi objek (Object-Oriented Programming, OOP) yang memungkinkan suatu objek atau fungsi untuk memiliki banyak bentuk (bentuk yang berbeda-beda) tergantung pada bagaimana ia digunakan. Kata *polimorfisme* sendiri berasal dari bahasa Yunani, yaitu "poly" yang berarti banyak, dan "morph" yang berarti bentuk.  
 
- **Jenis-jenis Polimorfisme**  
-Polimorfisme dapat dibagi menjadi dua jenis utama:  
+Polimorfisme adalah kemampuan untuk memanggil metode pada suatu objek tanpa mengetahui tipe spesifik dari objek tersebut. Metode yang dipanggil bergantung pada implementasi spesifik dari objek tersebut. Dengan demikian, kita dapat menulis kode yang fleksibel dan dapat digunakan kembali tanpa harus memperhatikan detail implementasi setiap tipe objek.
 
-1. **Polimorfisme pada waktu kompilasi (Compile-time Polymorphism)**  
-   Polimorfisme jenis ini dikenal juga sebagai *method overloading* atau *operator overloading*. Polimorfisme ini terjadi ketika sebuah fungsi atau metode memiliki nama yang sama, tetapi parameter atau argumennya berbeda. Contohnya:  
-   ```java
-   class Calculator {
-       // Overloading method add
-       int add(int a, int b) {
-           return a + b;
-       }
 
-       double add(double a, double b) {
-           return a + b;
-       }
-   }
-   ```  
-   Di sini, metode `add` bisa menangani argumen dengan tipe data berbeda, tetapi nama metode tetap sama.
+Polimorfisme dalam pemrograman OOP dibagi menjadi dua jenis utama:
+Polimorfisme Waktu Kompilasi (Compile-Time Polymorphism):
+Terjadi ketika metode yang akan dijalankan diputuskan saat kompilasi.
+Dicapai melalui method overloading (metode dengan nama yang sama tetapi parameter berbeda) atau operator overloading.
+Polimorfisme Waktu Eksekusi (Runtime Polymorphism):
+Terjadi ketika metode yang akan dijalankan diputuskan pada saat runtime.
+Dicapai melalui inheritance dan method overriding.
 
-2. **Polimorfisme pada waktu runtime (Runtime Polymorphism)**  
-   Polimorfisme ini dikenal juga sebagai *method overriding*. Ini memungkinkan subclass untuk menyediakan implementasi yang berbeda dari metode yang didefinisikan di superclass. Contohnya:  
-   ```java
-   class Animal {
-       void sound() {
-           System.out.println("Animal makes a sound");
-       }
-   }
 
-   class Dog extends Animal {
-       @Override
-       void sound() {
-           System.out.println("Dog barks");
-       }
-   }
+Manfaat Polimorfisme
+Kode yang Fleksibel:
+Kode dapat menangani berbagai tipe objek tanpa perlu mengetahui detail implementasinya.
+Reusability (Kode yang Dapat Digunakan Ulang):
+Polimorfisme memungkinkan metode yang sama digunakan untuk tipe data yang berbeda, sehingga meminimalkan pengulangan kode.
+Pemeliharaan Kode yang Lebih Mudah:
+Perubahan pada implementasi kelas turunan tidak memengaruhi kode yang menggunakan kelas induk.
 
-   class Cat extends Animal {
-       @Override
-       void sound() {
-           System.out.println("Cat meows");
-       }
-   }
-   public class Main {
-       public static void main(String[] args) {
-           Animal animal;
 
-           animal = new Dog();
-           animal.sound(); // Output: Dog barks
+Modularitas:
+Dengan menggunakan antarmuka atau kelas abstrak, kode dapat dirancang secara modular sehingga lebih mudah dipahami dan dikembangkan.
+Mengikuti Prinsip Desain OOP:
+Polimorfisme mendukung Open-Closed Principle, di mana kode mudah diperluas tanpa harus dimodifikasi.
 
-           animal = new Cat();
-           animal.sound(); // Output: Cat meows
-       }
-   }
-   ```  
-   Pada contoh di atas, metode `sound()` dipanggil berdasarkan tipe objek pada runtime, meskipun referensinya adalah tipe `Animal`.
 
-**Manfaat Polimorfisme**
-1. **Fleksibilitas**: Memungkinkan kode yang lebih fleksibel karena objek dapat digunakan dalam berbagai bentuk.
-2. **Pemeliharaan Kode**: Dengan polimorfisme, kode dapat diperbarui atau ditingkatkan tanpa memengaruhi komponen lain secara signifikan.
-3. **Reduksi Duplikasi Kode**: Menghindari penulisan kode yang berulang dengan cara mengatur fungsi atau metode yang generik.
+Contoh Code:
+class Kalkulator {
+    // Menjumlahkan dua angka
+    public int jumlah(int a, int b) {
+        return a + b;
+    }
 
-### **Implementasi Polimorfisme**
-Polimorfisme banyak digunakan dalam pemrograman OOP untuk mendukung prinsip *reusability* dan *extensibility*. Contohnya, dalam desain aplikasi, polimorfisme sering digunakan untuk membuat antarmuka (*interfaces*) atau kelas abstrak yang dapat diimplementasikan oleh berbagai kelas konkret.
+    // Menjumlahkan tiga angka
+    public int jumlah(int a, int b, int c) {
+        return a + b + c;
+    }
 
-Dengan memahami dan menerapkan polimorfisme, pengembang perangkat lunak dapat membuat sistem yang lebih terorganisasi, mudah dikembangkan, dan mudah dipelihara.
+    // Menjumlahkan array angka
+    public int jumlah(int[] angka) {
+        int total = 0;
+        for (int num : angka) {
+            total += num;
+        }
+        return total;
+    }
+}
+
+public class CompileTimePolymorphism {
+    public static void main(String[] args) {
+        Kalkulator kalkulator = new Kalkulator();
+
+        System.out.println("Jumlah dua angka: " + kalkulator.jumlah(5, 10)); // Output: 15
+        System.out.println("Jumlah tiga angka: " + kalkulator.jumlah(5, 10, 15)); // Output: 30
+        System.out.println("Jumlah array angka: " + kalkulator.jumlah(new int[]{1, 2, 3, 4, 5})); // Output: 15
+    }
+}
