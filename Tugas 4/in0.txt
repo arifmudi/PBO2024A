@@ -1,7 +1,0 @@
-kata orang
-aku berbeda
-tapi tak apa
-######## 
-Min: 11 karakter
-Max: 13 karakter
-Range: 2 karakter
