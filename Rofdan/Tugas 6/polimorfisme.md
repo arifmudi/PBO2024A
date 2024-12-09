@@ -38,6 +38,65 @@ Polimorfisme run-time mungkin lebih lambat dibandingkan polimorfisme compile-tim
 -Kode Lebih Bersih dan Terorganisir: Dengan menyatukan perilaku serupa dalam antarmuka atau superclass, Anda mengurangi redundansi kode.
 -Peningkatan Daya Uji (Testability): Dengan menggunakan polimorfisme, Anda dapat mengganti implementasi dengan mock atau stub selama pengujian unit, membuat kode lebih mudah diuji.
 
+1. **Polimorfisme Kompilasi (Compile-Time Polymorphism)**  
+   Disebut juga sebagai *method overloading*. Di sini, beberapa metode dalam satu kelas memiliki nama yang sama 
+   tetapi parameter yang berbeda.
+
+2. **Polimorfisme Run-Time (Run-Time Polymorphism)**  
+   Disebut juga sebagai *method overriding*. Di sini, sebuah metode di kelas induk (*parent class*) diimplementasikan ulang 
+   di kelas anak (*child class*).
+
+## Contoh Polimorfisme
+
+### Contoh Compile-Time Polymorphism
+```java
+class Calculator {
+    // Method dengan parameter tunggal
+    int add(int a) {
+        return a + 10;
+    }
+
+    // Method dengan dua parameter
+    int add(int a, int b) {
+        return a + b;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Calculator calc = new Calculator();
+        System.out.println(calc.add(5));         // Output: 15
+        System.out.println(calc.add(5, 10));     // Output: 15
+    }
+}
+```
+
+### Contoh Run-Time Polymorphism
+```java
+class Animal {
+    void sound() {
+        System.out.println("Animal makes a sound");
+    }
+}
+
+class Dog extends Animal {
+    @Override
+    void sound() {
+        System.out.println("Dog barks");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Animal animal1 = new Animal();
+        Animal animal2 = new Dog();
+
+        animal1.sound();  // Output: Animal makes a sound
+        animal2.sound();  // Output: Dog barks
+    }
+}
+```
+
 - Kesimpulan:
 
 Polimorfisme adalah konsep inti dalam OOP yang memungkinkan fleksibilitas dan efisiensi kode. Dengan menggunakan polimorfisme, pengembang dapat membuat kode yang lebih bersih, modular, dan mudah dipelihara, menjadikannya elemen kunci dalam pengembangan perangkat lunak modern.
