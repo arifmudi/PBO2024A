@@ -1,0 +1,125 @@
+
+
+### Pendahuluan Variabel dan Tipe Data di Python
+
+#### A. Definisi Variabel
+
+**Variabel** adalah tempat penyimpanan untuk menyimpan nilai data dalam program Python. Variabel dapat menyimpan berbagai macam tipe data dan tidak perlu dideklarasikan tipe data tertentu sebelum digunakan. Anda hanya perlu memberikan nama dan nilai variabel, lalu Python akan menentukan tipe datanya secara otomatis[2][3][4].
+
+#### B. Membuat Variabel di Python
+
+Untuk membuat variabel di Python, Anda dapat menggunakan format seperti ini:
+```python
+nama_variabel = <nilai>
+```
+Contoh:
+```python
+variabel_ku = "ini isi variabel"
+variabel2 = 20
+```
+Kemudian untuk melihat isi variabel,menggunakan fungsi `print`:
+```python
+print(variabel_ku)
+print(variabel2)
+```
+
+#### C. Aturan Penulisan Variabel
+
+1. **Nama Variabel**: Nama variabel boleh diawali dengan huruf atau garis bawah (`_`). Karakter selanjutnya dapat berupa huruf, garis bawah (`_`), atau angka. Misalnya:
+   - `nama`
+   - `_nama`
+   - `namaKu`
+   - `nama_variabel`
+   - `__nama`
+   - `n2`
+   - `nilai1`
+
+2. **Case Sensitive**: Nama variabel peka terhadap huruf besar dan kecil (case-sensitive). Artinya huruf besar dan kecil dibedakan. Misalnya:
+   - `variabel_Ku` dan `variabel_ku` adalah variabel yang berbeda.
+
+3. **Kata Kunci**: Nama variabel tidak boleh menggunakan kata kunci yang sudah ada dalam Python seperti `if`, `while`, `for`, dll.[2][3][4].
+
+
+#### A. Jenis-Jenis Tipe Data
+
+Python memiliki beberapa jenis tipe data primitif, yaitu:
+
+1. **Tipe Data Angka**
+   - `int`: Bilangan bulat, contoh `32`, `22`, `12`, `10`, dll.
+   - `float`: Bilangan pecahan, contoh `1.3`, `4.2`, `22.3`, dll.
+   - Contoh penggunaan:
+     ```python
+     harga = 12000  # tipe int
+     berat = 23.12  # float
+     jarak = 3e3    # float 3000.0, huruf e artinya eksponen 10
+     ```
+
+2. **Tipe Data Teks**
+   - `char`: Karakter tunggal, contoh `'R'`.
+   - `string`: Kumpulan karakter, contoh `"aku lagi makan"`.
+   - Penulisan tipe data teks harus diapit dengan tanda petik. Bisa menggunakan petik tunggal (`'...'`), ganda (`"..."`), dan tiga (`'''...'''` atau `"""..."""`).
+   - Contoh penggunaan:
+     ```python
+     nama = "Ivan"
+     jenis_kelamin = 'L'
+     alamat = """
+     Jl. Suka Karya, No 32. RT Kode,
+     Kelurahan Mawar, Jakarta
+     """
+     agama = 'islam'
+     ```
+
+3. **Tipe Data Boolean**
+   - Tipe data boolean adalah tipe data yang hanya memiliki dua nilai, yaitu `True` dan `False`.
+
+#### B. Mendapatkan Tipe Data
+
+Untuk memeriksa tipe data dari suatu variabel, menggunakan fungsi `type()`:
+```python
+x = 5
+print(type(x))  # Output: <class 'int'>
+y = "John"
+print(type(y))  # Output: <class 'str'>
+```
+
+### Komentar di Python
+
+#### A. Komentar Singkat
+
+Komentar singkat di Python dimulai dengan tanda pagar (`#`). Python akan membuat sisa barisnya sebagai komentar dan tidak akan dieksekusi:
+```python
+# Ini adalah komentar
+x = 5
+print(x)  # Output: 5
+```
+
+#### B. Komentar Multiline
+
+Komentar multiline di Python dapat ditulis dengan menggunakan tiga tanda kutip (`"""..."""`):
+```python
+""" Ini adalah komentar ditulis dengan lebih dari satu baris """
+print("Hello, World!")  # Output: Hello, World!
+```
+
+### Contoh Penggunaan Variabel dan Tipe Data
+
+Contoh penggunaan variabel dan tipe data di Python:
+```python
+nama = "John Doe"
+print(nama)  # Output: John Doe
+
+umur = 20  # nilai awal
+print(umur)  # Output: 20
+type(umur)   # Output: <class 'int'>
+
+umur = "dua puluh satu"  # nilai setelah diubah
+print(umur)  # Output: dua puluh satu
+type(umur)   # Output: <class 'str'>
+
+namaDepan = "Budi"
+namaBelakang = "Susanto"
+nama = namaDepan + " " + namaBelakang
+umur = 22
+hobi = "Berenang"
+print("Biodata\n", nama, "\n", umur, "\n", hobi)
+```
